@@ -147,7 +147,6 @@ export default function Navbar() {
 
   const links = [
     { href: '#services', label: t('services') },
-    { href: '#about', label: t('about') },
     { href: '#contact', label: t('contact') },
   ]
 
@@ -181,8 +180,8 @@ export default function Navbar() {
           <Image
             src="/logos/logo-light.svg"
             alt="Avilo Immigration"
-            width={120}
-            height={40}
+            width={150}
+            height={50}
             priority
           />
         </Link>

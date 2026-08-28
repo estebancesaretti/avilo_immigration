@@ -3,13 +3,13 @@
     "services": "Services",
     "about": "About",
     "contact": "Contact",
-    "cta": "Book a consultation"
+    "cta": "Contact us"
   },
   "hero": {
     "eyebrow": "Immigration specialists in Europe",
     "headline": "Immigration can be complex. Your guide does not have to be.",
     "subheadline": "Avilo guides individuals and families through every step of the immigration process — with expertise, clarity, and care.",
-    "ctaPrimary": "Get a free consultation",
+    "ctaPrimary": "Tell us your situation",
     "ctaSecondary": "Explore our services"
   },
   "services": {
@@ -60,18 +60,30 @@
   },
   "howItWorks": {
     "title": "How it works",
-    "subtitle": "A simple, transparent process — from first contact to approval.",
+    "subtitle": "A simple, personalised process — expert guidance, clear pricing, and support from start to finish.",
     "step1": {
-      "title": "Tell us your situation",
-      "description": "Fill in a short form or book a call. We assess your case and explain your options clearly."
+      "num": "01",
+      "title": "Tell us about your situation",
+      "tagline": "Start with a form or email.",
+      "description": "Tell us about your situation, what you want to achieve, and how we can help. Our team will review your case and determine the best way to assist you."
     },
     "step2": {
-      "title": "We prepare your file",
-      "description": "Our experts collect all required documents, complete forms, and submit your application on your behalf."
+      "num": "02",
+      "title": "We assess your case",
+      "tagline": "Personalised advice, when you need it.",
+      "description": "Once we review your situation, we'll come back to you with an initial assessment and the next steps."
     },
     "step3": {
-      "title": "You get your approval",
-      "description": "We follow up with authorities and keep you informed every step of the way until you receive your decision."
+      "num": "03",
+      "title": "Receive your personalised proposal",
+      "tagline": "Clear pricing based on your case.",
+      "description": "Every immigration case is different. Once we understand how we can help, we'll provide you with an estimated price and a clear overview of the services included."
+    },
+    "step4": {
+      "num": "04",
+      "title": "We handle the process",
+      "tagline": "You stay informed. We take care of the rest.",
+      "description": "From completing forms correctly to preparing applications and communicating with your local Town Hall and relevant authorities, we handle the process with you and keep you informed every step of the way."
     }
   },
   "testimonials": {

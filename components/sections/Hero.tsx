@@ -10,7 +10,7 @@ export default function Hero() {
     <section
       style={{
         backgroundColor: 'var(--color-bg)',
-        padding: '5rem 1.5rem',
+        padding: '3.5rem 1.5rem',
       }}
     >
       <div
@@ -76,7 +76,7 @@ export default function Hero() {
             {t('subheadline')}
           </p>
 
-          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+          <div>
             <Link
               href="#contact"
               style={{
@@ -94,25 +94,7 @@ export default function Hero() {
               }}
             >
               {t('ctaPrimary')}
-              <ArrowRight size={16} />
-            </Link>
-            <Link
-              href="#services"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                backgroundColor: 'transparent',
-                color: 'var(--color-ink)',
-                fontFamily: 'var(--font-body)',
-                fontWeight: 500,
-                fontSize: '0.9375rem',
-                padding: '0.75rem 1.5rem',
-                borderRadius: '0.75rem',
-                border: '1px solid var(--color-border)',
-                textDecoration: 'none',
-              }}
-            >
-              {t('ctaSecondary')}
+              <span className="cta-arrow"><ArrowRight size={16} /></span>
             </Link>
           </div>
         </div>
@@ -123,7 +105,7 @@ export default function Hero() {
           style={{
             backgroundColor: 'var(--color-lavender)',
             borderRadius: '1.5rem',
-            padding: '3rem 2rem',
+            padding: '2rem',
           }}
         >
           <ArcAnimation />

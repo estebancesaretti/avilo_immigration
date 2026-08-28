@@ -37,6 +37,9 @@ const SERVICE_OPTIONS = [
   'Integration & Settlement',
   'Asylum & Refugee Support',
   'Document Legalisation',
+  'Work Authorization',
+  'Student Visas',
+  'Appeals & Legal Support',
   'Other / Not sure yet',
 ].map((s) => ({ value: s, label: s }))
 
@@ -154,7 +157,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" style={{ backgroundColor: 'var(--color-bg)', padding: '5rem 1.5rem' }}>
+    <section id="contact" style={{ backgroundColor: 'var(--color-bg)', padding: '5rem 1.5rem', scrollMarginTop: '80px' }}>
       <div style={{ maxWidth: '820px', margin: '0 auto' }}>
         {/* Card */}
         <div

@@ -2,7 +2,8 @@
 
 import { useTranslations } from 'next-intl'
 import { useState } from 'react'
-import { Briefcase, Users, GraduationCap, Shield, FileCheck, Building2, BookOpen, Scale, ChevronDown } from 'lucide-react'
+import { Briefcase, Users, GraduationCap, Shield, FileCheck, Building2, BookOpen, Scale, ChevronDown, MessageCircle } from 'lucide-react'
+import Link from 'next/link'
 
 const CARDS = [
   { icon: Briefcase,     titleKey: 'card1.title', descKey: 'card1.description' },
@@ -24,7 +25,7 @@ export default function Services() {
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
         {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+        <div style={{ marginBottom: '3rem' }}>
           <h2 style={{
             fontFamily: 'var(--font-heading)',
             fontSize: 'clamp(1.75rem, 3vw, 2.25rem)',
@@ -172,6 +173,49 @@ export default function Services() {
             )
           })}
         </div>
+
+        {/* ── Catch-all box ── */}
+        <Link
+          href="#contact"
+          style={{ textDecoration: 'none', display: 'block', marginTop: '1.5rem' }}
+        >
+          <div
+            style={{
+              border: '2px dashed var(--color-purple)',
+              borderRadius: '0.75rem',
+              padding: '1.5rem 2rem',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1.25rem',
+              backgroundColor: 'transparent',
+              transition: 'background-color 0.2s',
+              cursor: 'pointer',
+            }}
+            onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = 'var(--color-lavender)' }}
+            onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent' }}
+          >
+            <MessageCircle size={28} color="var(--color-purple)" style={{ flexShrink: 0 }} />
+            <div>
+              <p style={{
+                fontFamily: 'var(--font-heading)',
+                fontSize: '1rem',
+                fontWeight: 700,
+                color: 'var(--color-ink)',
+                margin: '0 0 0.25rem',
+              }}>
+                Don't see your situation here?
+              </p>
+              <p style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '0.9375rem',
+                color: 'var(--color-muted)',
+                margin: 0,
+              }}>
+                Reach out anyway — we'll let you know if we can help.
+              </p>
+            </div>
+          </div>
+        </Link>
 
       </div>
     </section>

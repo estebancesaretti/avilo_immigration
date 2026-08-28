@@ -51,8 +51,7 @@ export default function Footer() {
           >
             {[
               { href: '#services', label: t('links.services') },
-              { href: '#about', label: t('links.about') },
-              { href: '#contact', label: t('links.contact') },
+                            { href: '#contact', label: t('links.contact') },
               { href: '/privacy', label: t('links.privacy') },
             ].map((link) => (
               <Link
