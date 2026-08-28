@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "services": "Services",
+    "about": "À propos",
+    "contact": "Contact",
+    "cta": "Réserver une consultation"
+  },
+  "hero": {
+    "eyebrow": "Spécialistes en immigration en Europe",
+    "headline": "Votre voyage vers un nouveau chez-vous commence ici",
+    "subheadline": "Avilo accompagne les individus et les familles à chaque étape du processus d'immigration.",
+    "ctaPrimary": "Consultation gratuite",
+    "ctaSecondary": "Nos services"
+  },
+  "services": {
+    "title": "Comment nous pouvons vous aider",
+    "subtitle": "Accompagnement complet en immigration, adapté à votre situation.",
+    "card1": {
+      "title": "Demandes de visa et de permis",
+      "description": "Nous gérons l'ensemble du processus de demande de permis de travail et d'autorisation de séjour."
+    },
+    "card2": {
+      "title": "Regroupement familial",
+      "description": "Réunir les familles par-delà les frontières. Nous vous guidons à chaque étape."
+    },
+    "card3": {
+      "title": "Intégration & Installation",
+      "description": "Soutien linguistique et cours d'intégration civique pour vous aider à construire une vie stable."
+    }
+  },
+  "whereWeOperate": {
+    "title": "Où nous opérons",
+    "caption": "En expansion dans l'Union européenne",
+    "countries": {
+      "be": "Belgique",
+      "nl": "Pays-Bas",
+      "lu": "Luxembourg",
+      "fr": "France"
+    }
+  },
+  "howItWorks": {
+    "title": "Comment ça marche",
+    "subtitle": "Un processus simple et transparent.",
+    "step1": {
+      "title": "Parlez-nous de votre situation",
+      "description": "Remplissez un court formulaire ou réservez un appel. Nous évaluons votre dossier."
+    },
+    "step2": {
+      "title": "Nous préparons votre dossier",
+      "description": "Nos experts collectent tous les documents requis et soumettent votre demande."
+    },
+    "step3": {
+      "title": "Vous obtenez votre approbation",
+      "description": "Nous suivons votre dossier et vous tenons informé jusqu'à la décision."
+    }
+  },
+  "testimonials": {
+    "title": "Ce que disent nos clients",
+    "card1": {
+      "text": "Avilo a rendu ma demande de permis de travail sans effort. Ils ont expliqué chaque étape et je ne me suis jamais senti perdu.",
+      "name": "Mohamed R.",
+      "country": "Belgique"
+    },
+    "card2": {
+      "text": "L'équipe était incroyablement professionnelle. Grâce à Avilo, mon regroupement familial a été approuvé rapidement.",
+      "name": "Linh T.",
+      "country": "Pays-Bas"
+    }
+  },
+  "cta": {
+    "headline": "Prêt à commencer votre parcours d'immigration ?",
+    "subtext": "Obtenez un devis personnalisé en moins de 3 minutes.",
+    "button": "Commencer"
+  },
+  "footer": {
+    "links": {
+      "services": "Services",
+      "about": "À propos",
+      "contact": "Contact",
+      "privacy": "Politique de confidentialité"
+    },
+    "copyright": "© 2025 Avilo Immigration"
+  }
+}

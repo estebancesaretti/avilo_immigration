@@ -1,0 +1,109 @@
+{
+  "nav": {
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Book a consultation"
+  },
+  "hero": {
+    "eyebrow": "Immigration specialists in Europe",
+    "headline": "Immigration can be complex. Your guide does not have to be.",
+    "subheadline": "Avilo guides individuals and families through every step of the immigration process — with expertise, clarity, and care.",
+    "ctaPrimary": "Get a free consultation",
+    "ctaSecondary": "Explore our services"
+  },
+  "services": {
+    "title": "How we can help",
+    "subtitle": "End-to-end immigration support tailored to your situation.",
+    "card1": {
+      "title": "Visa & Permit Applications",
+      "description": "We handle the full application process for work permits, family reunification visas, and long-stay authorizations."
+    },
+    "card2": {
+      "title": "Family Reunification",
+      "description": "Bringing families together across borders. We guide you through every document and administrative step."
+    },
+    "card3": {
+      "title": "Integration & Settlement",
+      "description": "Language support, civic integration courses, and guidance to help you build a stable life in your new country."
+    }
+  },
+  "whereWeOperate": {
+    "title": "Where we operate",
+    "caption": "Expanding across the European Union",
+    "countries": {
+      "be": "Belgium",
+      "nl": "Netherlands",
+      "lu": "Luxembourg",
+      "fr": "France"
+    }
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "subtitle": "A simple, transparent process — from first contact to approval.",
+    "step1": {
+      "title": "Tell us your situation",
+      "description": "Fill in a short form or book a call. We assess your case and explain your options clearly."
+    },
+    "step2": {
+      "title": "We prepare your file",
+      "description": "Our experts collect all required documents, complete forms, and submit your application on your behalf."
+    },
+    "step3": {
+      "title": "You get your approval",
+      "description": "We follow up with authorities and keep you informed every step of the way until you receive your decision."
+    }
+  },
+  "testimonials": {
+    "title": "What our clients say",
+    "card1": {
+      "text": "Avilo made my work permit application feel effortless. They explained every step and I never felt lost. I highly recommend them to anyone navigating Belgian immigration.",
+      "name": "Mohamed R.",
+      "country": "Belgium"
+    },
+    "card2": {
+      "text": "The team was incredibly professional and responsive. Thanks to Avilo, my family reunification was approved in record time. We are finally together.",
+      "name": "Linh T.",
+      "country": "Netherlands"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Fill out the form below to get started with your immigration journey.",
+    "labelName": "Full Name",
+    "labelEmail": "Email",
+    "labelPhone": "Phone Number",
+    "labelNationality": "Nationality",
+    "labelResidence": "Current Residence",
+    "labelDestination": "Destination Country",
+    "labelService": "Service Interested In",
+    "labelMessage": "Your Message",
+    "placeholderNationality": "Select nationality",
+    "placeholderResidence": "Select country",
+    "placeholderDestination": "Select destination",
+    "placeholderService": "Select a service",
+    "placeholderMessage": "Tell us about your case…",
+    "optional": "optional",
+    "invalidEmail": "Please enter a valid email address.",
+    "submit": "Send Message",
+    "sending": "Sending…",
+    "successTitle": "Message received!",
+    "successMessage": "Thank you for reaching out. We'll be in touch within 24 hours.",
+    "errorMessage": "Something went wrong. Please try again or email us directly.",
+    "directEmail": "Prefer to email us directly?"
+  },
+  "cta": {
+    "headline": "Ready to start your immigration journey?",
+    "subtext": "Get a personalized quote in under 3 minutes.",
+    "button": "Get started"
+  },
+  "footer": {
+    "links": {
+      "services": "Services",
+      "about": "About",
+      "contact": "Contact",
+      "privacy": "Privacy Policy"
+    },
+    "copyright": "© 2025 Avilo Immigration"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "services": "Diensten",
+    "about": "Over ons",
+    "contact": "Contact",
+    "cta": "Boek een consultatie"
+  },
+  "hero": {
+    "eyebrow": "Immigratiespecialisten in Europa",
+    "headline": "Uw reis naar een nieuw thuis begint hier",
+    "subheadline": "Avilo begeleidt individuen en gezinnen bij elke stap van het immigratieproces.",
+    "ctaPrimary": "Gratis consultatie",
+    "ctaSecondary": "Onze diensten"
+  },
+  "services": {
+    "title": "Hoe wij kunnen helpen",
+    "subtitle": "Volledige immigratiebegeleiding op maat.",
+    "card1": {
+      "title": "Visa- en vergunningsaanvragen",
+      "description": "Wij begeleiden u door het volledige aanvraagproces voor werkvergunningen en verblijfsvergunningen."
+    },
+    "card2": {
+      "title": "Gezinshereniging",
+      "description": "Gezinnen samengebracht over grenzen heen. Wij begeleiden u bij elke stap."
+    },
+    "card3": {
+      "title": "Integratie & Vestiging",
+      "description": "Taalondersteuning en inburgeringscursussen om u te helpen een stabiel leven op te bouwen."
+    }
+  },
+  "whereWeOperate": {
+    "title": "Waar wij actief zijn",
+    "caption": "Groeiend door de Europese Unie",
+    "countries": {
+      "be": "België",
+      "nl": "Nederland",
+      "lu": "Luxemburg",
+      "fr": "Frankrijk"
+    }
+  },
+  "howItWorks": {
+    "title": "Hoe het werkt",
+    "subtitle": "Een eenvoudig en transparant proces.",
+    "step1": {
+      "title": "Vertel ons uw situatie",
+      "description": "Vul een kort formulier in of boek een gesprek. Wij beoordelen uw dossier."
+    },
+    "step2": {
+      "title": "Wij bereiden uw dossier voor",
+      "description": "Onze experts verzamelen alle documenten en dienen uw aanvraag in."
+    },
+    "step3": {
+      "title": "U ontvangt uw goedkeuring",
+      "description": "Wij volgen uw dossier op en houden u op de hoogte tot u een beslissing ontvangt."
+    }
+  },
+  "testimonials": {
+    "title": "Wat onze klanten zeggen",
+    "card1": {
+      "text": "Avilo maakte mijn werkvergunningsaanvraag moeiteloos. Ze legden elke stap uit en ik voelde me nooit verloren.",
+      "name": "Mohamed R.",
+      "country": "België"
+    },
+    "card2": {
+      "text": "Het team was ongelooflijk professioneel. Dankzij Avilo werd mijn gezinshereniging snel goedgekeurd.",
+      "name": "Linh T.",
+      "country": "Nederland"
+    }
+  },
+  "cta": {
+    "headline": "Klaar om uw immigratiereis te beginnen?",
+    "subtext": "Ontvang een gepersonaliseerde offerte in minder dan 3 minuten.",
+    "button": "Aan de slag"
+  },
+  "footer": {
+    "links": {
+      "services": "Diensten",
+      "about": "Over ons",
+      "contact": "Contact",
+      "privacy": "Privacybeleid"
+    },
+    "copyright": "© 2025 Avilo Immigration"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "services": "Servicios",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "cta": "Reservar consulta"
+  },
+  "hero": {
+    "eyebrow": "Especialistas en inmigración en Europa",
+    "headline": "Tu viaje hacia un nuevo hogar comienza aquí",
+    "subheadline": "Avilo guía a personas y familias en cada etapa del proceso de inmigración.",
+    "ctaPrimary": "Consulta gratuita",
+    "ctaSecondary": "Nuestros servicios"
+  },
+  "services": {
+    "title": "Cómo podemos ayudarte",
+    "subtitle": "Apoyo integral en inmigración adaptado a tu situación.",
+    "card1": {
+      "title": "Solicitudes de visa y permiso",
+      "description": "Gestionamos todo el proceso de solicitud de permisos de trabajo y autorizaciones de residencia."
+    },
+    "card2": {
+      "title": "Reunificación familiar",
+      "description": "Reunir familias a través de las fronteras. Te guiamos en cada paso."
+    },
+    "card3": {
+      "title": "Integración y asentamiento",
+      "description": "Apoyo lingüístico y cursos de integración cívica para ayudarte a construir una vida estable."
+    }
+  },
+  "whereWeOperate": {
+    "title": "Dónde operamos",
+    "caption": "En expansión por la Unión Europea",
+    "countries": {
+      "be": "Bélgica",
+      "nl": "Países Bajos",
+      "lu": "Luxemburgo",
+      "fr": "Francia"
+    }
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "subtitle": "Un proceso simple y transparente.",
+    "step1": {
+      "title": "Cuéntanos tu situación",
+      "description": "Completa un breve formulario o reserva una llamada. Evaluamos tu caso."
+    },
+    "step2": {
+      "title": "Preparamos tu expediente",
+      "description": "Nuestros expertos recopilan todos los documentos necesarios y presentan tu solicitud."
+    },
+    "step3": {
+      "title": "Recibes tu aprobación",
+      "description": "Hacemos seguimiento y te mantenemos informado hasta que recibas una decisión."
+    }
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros clientes",
+    "card1": {
+      "text": "Avilo hizo que mi solicitud de permiso de trabajo fuera muy sencilla. Explicaron cada paso y nunca me sentí perdido.",
+      "name": "Mohamed R.",
+      "country": "Bélgica"
+    },
+    "card2": {
+      "text": "El equipo fue increíblemente profesional. Gracias a Avilo, mi reunificación familiar fue aprobada rápidamente.",
+      "name": "Linh T.",
+      "country": "Países Bajos"
+    }
+  },
+  "cta": {
+    "headline": "¿Listo para comenzar tu viaje de inmigración?",
+    "subtext": "Obtén un presupuesto personalizado en menos de 3 minutos.",
+    "button": "Comenzar"
+  },
+  "footer": {
+    "links": {
+      "services": "Servicios",
+      "about": "Nosotros",
+      "contact": "Contacto",
+      "privacy": "Política de privacidad"
+    },
+    "copyright": "© 2025 Avilo Immigration"
+  }
+}
