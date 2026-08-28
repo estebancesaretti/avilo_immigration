@@ -1,8 +1,6 @@
 import { Resend } from 'resend'
 import { NextResponse } from 'next/server'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 // Basic MX / format validation via a free API
 async function isEmailReal(email: string): Promise<boolean> {
   try {
@@ -160,6 +158,7 @@ export async function POST(req: Request) {
 
   const html = buildEmailHtml(fullName, email, phone || '', nationality, currentResidence, destinationCountry, service, message)
 
+  const resend = new Resend(process.env.RESEND_API_KEY)
   const { error } = await resend.emails.send({
     from: 'Avilo Contact Form <onboarding@resend.dev>',
     to: process.env.CONTACT_EMAIL!,
