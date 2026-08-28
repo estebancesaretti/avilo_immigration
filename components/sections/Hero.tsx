@@ -20,18 +20,6 @@ export default function Hero() {
         {/* Text side */}
         <div className="md:order-1 text-left" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
 
-          {/* Arc animation — mobile only, above eyebrow */}
-          <div
-            className="md:hidden justify-center"
-            style={{
-              backgroundColor: 'var(--color-lavender)',
-              borderRadius: '1.25rem',
-              padding: '1.5rem 1rem',
-            }}
-          >
-            <ArcAnimation />
-          </div>
-
           <span
             style={{
               display: 'inline-block',
@@ -99,13 +87,13 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Arc animation — desktop only */}
+        {/* Arc animation — below text on mobile, right column on desktop */}
         <div
-          className="hidden md:flex items-center justify-center order-1 md:order-2"
+          className="flex items-center justify-center order-2 md:order-2"
           style={{
             backgroundColor: 'var(--color-lavender)',
             borderRadius: '1.5rem',
-            padding: '2rem',
+            padding: '1.5rem',
           }}
         >
           <ArcAnimation />

@@ -1,7 +1,6 @@
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ExternalLink, AtSign } from 'lucide-react'
 
 export default function Footer() {
   const t = useTranslations('footer')
@@ -24,15 +23,7 @@ export default function Footer() {
         }}
       >
         {/* Top row */}
-        <div
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            alignItems: 'flex-start',
-            gap: '1.5rem',
-          }}
-        >
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6">
           {/* Logo */}
           <Image
             src="/logos/logo-mono-white.svg"
@@ -46,12 +37,12 @@ export default function Footer() {
             style={{
               display: 'flex',
               flexWrap: 'wrap',
-              gap: '1.5rem',
+              gap: '1.25rem 1.5rem',
             }}
           >
             {[
               { href: '#services', label: t('links.services') },
-                            { href: '#contact', label: t('links.contact') },
+              { href: '#contact', label: t('links.contact') },
               { href: '/privacy', label: t('links.privacy') },
             ].map((link) => (
               <Link
@@ -68,28 +59,6 @@ export default function Footer() {
               </Link>
             ))}
           </nav>
-
-          {/* Social icons */}
-          <div style={{ display: 'flex', gap: '1rem' }}>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              style={{ color: 'rgba(255,255,255,0.7)' }}
-            >
-              <ExternalLink size={20} />
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              style={{ color: 'rgba(255,255,255,0.7)' }}
-            >
-              <AtSign size={20} />
-            </a>
-          </div>
         </div>
 
         {/* Bottom row */}

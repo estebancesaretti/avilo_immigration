@@ -243,6 +243,7 @@ export default function Contact() {
                   <div style={{ flex: 1 }}>
                     <label htmlFor="nationality" style={labelStyle}>{t('labelNationality')}</label>
                     <Select
+                      instanceId="nationality"
                       inputId="nationality"
                       options={COUNTRY_OPTIONS}
                       placeholder={t('placeholderNationality')}
@@ -256,6 +257,7 @@ export default function Contact() {
                   <div style={{ flex: 1 }}>
                     <label htmlFor="currentResidence" style={labelStyle}>{t('labelResidence')}</label>
                     <Select
+                      instanceId="currentResidence"
                       inputId="currentResidence"
                       options={COUNTRY_OPTIONS}
                       placeholder={t('placeholderResidence')}
@@ -269,6 +271,7 @@ export default function Contact() {
                   <div style={{ flex: 1 }}>
                     <label htmlFor="destinationCountry" style={labelStyle}>{t('labelDestination')}</label>
                     <Select
+                      instanceId="destinationCountry"
                       inputId="destinationCountry"
                       options={DESTINATION_OPTIONS}
                       placeholder={t('placeholderDestination')}
@@ -283,6 +286,7 @@ export default function Contact() {
                 <div>
                   <label htmlFor="service" style={labelStyle}>{t('labelService')}</label>
                   <Select
+                    instanceId="service"
                     inputId="service"
                     options={SERVICE_OPTIONS}
                     placeholder={t('placeholderService')}
