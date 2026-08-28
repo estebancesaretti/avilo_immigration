@@ -30,9 +30,7 @@ export default async function HomePage({ params }: Props) {
         <Services />
         <WhereWeOperate />
         <HowItWorks />
-        <Testimonials />
         <Contact />
-        <CTABanner />
       </main>
       <Footer />
     </>

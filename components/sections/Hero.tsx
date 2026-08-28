@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl'
-import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import ArcAnimation from '@/components/ArcAnimation'
 
 export default function Hero() {
   const t = useTranslations('hero')
@@ -19,6 +19,19 @@ export default function Hero() {
       >
         {/* Text side */}
         <div className="md:order-1 text-left" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+
+          {/* Arc animation — mobile only, above eyebrow */}
+          <div
+            className="md:hidden justify-center"
+            style={{
+              backgroundColor: 'var(--color-lavender)',
+              borderRadius: '1.25rem',
+              padding: '1.5rem 1rem',
+            }}
+          >
+            <ArcAnimation />
+          </div>
+
           <span
             style={{
               display: 'inline-block',
@@ -104,26 +117,16 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Image side */}
-        <div className="hidden md:block order-1 md:order-2 w-full relative overflow-hidden rounded-xl">
-          <Image
-            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
-            alt="Professional immigration consultant"
-            width={800}
-            height={1000}
-            className="w-full h-64 md:h-full object-cover rounded-xl"
-            priority
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-          {/* Lavender tint overlay */}
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              backgroundColor: 'rgba(124, 111, 205, 0.08)',
-              borderRadius: '1.25rem',
-            }}
-          />
+        {/* Arc animation — desktop only */}
+        <div
+          className="hidden md:flex items-center justify-center order-1 md:order-2"
+          style={{
+            backgroundColor: 'var(--color-lavender)',
+            borderRadius: '1.5rem',
+            padding: '3rem 2rem',
+          }}
+        >
+          <ArcAnimation />
         </div>
       </div>
     </section>

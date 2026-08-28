@@ -26,6 +26,26 @@
     "card3": {
       "title": "Integration & Settlement",
       "description": "Language support, civic integration courses, and guidance to help you build a stable life in your new country."
+    },
+    "card4": {
+      "title": "Asylum & Refugee Support",
+      "description": "Compassionate guidance through the asylum process — from application to recognition, we stand by you at every step."
+    },
+    "card5": {
+      "title": "Document Legalisation",
+      "description": "Apostille, certified translations, and legalisation of official documents for use in European immigration procedures."
+    },
+    "card6": {
+      "title": "Work Authorization",
+      "description": "Single permits, work visas, and employer sponsorship guidance for professionals relocating to Belgium and the Benelux."
+    },
+    "card7": {
+      "title": "Student Visas",
+      "description": "Study permit applications and enrollment support for international students pursuing education in Europe."
+    },
+    "card8": {
+      "title": "Appeals & Legal Support",
+      "description": "If your application was refused, we review your case, prepare a strong appeal, and represent your interests before authorities."
     }
   },
   "whereWeOperate": {
@@ -104,6 +124,6 @@
       "contact": "Contact",
       "privacy": "Privacy Policy"
     },
-    "copyright": "© 2025 Avilo Immigration"
+    "copyright": "© 2026 Avilo Immigration"
   }
 }

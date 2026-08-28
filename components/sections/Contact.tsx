@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { CheckCircle } from 'lucide-react'
 import { PhoneInput } from 'react-international-phone'
 import 'react-international-phone/style.css'
+import Select from 'react-select'
 
 const COUNTRIES = [
   'Afghanistan', 'Albania', 'Algeria', 'Angola', 'Argentina', 'Bangladesh',
@@ -20,22 +21,24 @@ const COUNTRIES = [
   'United States', 'Venezuela', 'Vietnam', 'Yemen', 'Other',
 ]
 
-const DESTINATION_COUNTRIES = [
+const COUNTRY_OPTIONS = COUNTRIES.map((c) => ({ value: c, label: c }))
+
+const DESTINATION_OPTIONS = [
   'Belgium',
   'Netherlands',
   'Luxembourg',
   'France',
   'Other EU country',
-]
+].map((c) => ({ value: c, label: c }))
 
-const SERVICES = [
+const SERVICE_OPTIONS = [
   'Visa & Permit Applications',
   'Family Reunification',
   'Integration & Settlement',
   'Asylum & Refugee Support',
   'Document Legalisation',
   'Other / Not sure yet',
-]
+].map((s) => ({ value: s, label: s }))
 
 type FormState = {
   fullName: string
@@ -57,6 +60,31 @@ const initial: FormState = {
   destinationCountry: '',
   service: '',
   message: '',
+}
+
+const selectStyles = {
+  control: (base: object) => ({
+    ...base,
+    fontFamily: 'var(--font-body)',
+    fontSize: '0.9375rem',
+    borderColor: 'var(--color-border)',
+    borderRadius: '0.625rem',
+    minHeight: '46px',
+    boxShadow: 'none',
+    '&:hover': { borderColor: '#7c6fcd' },
+  }),
+  option: (base: object, state: { isSelected: boolean; isFocused: boolean }) => ({
+    ...base,
+    fontFamily: 'var(--font-body)',
+    fontSize: '0.9375rem',
+    backgroundColor: state.isSelected ? '#7c6fcd' : state.isFocused ? '#f0effe' : 'white',
+    color: state.isSelected ? 'white' : '#1a1a2e',
+    cursor: 'pointer',
+  }),
+  placeholder: (base: object) => ({ ...base, color: '#9ca3af' }),
+  singleValue: (base: object) => ({ ...base, color: '#1a1a2e' }),
+  menu: (base: object) => ({ ...base, borderRadius: '0.625rem', zIndex: 50 }),
+  input: (base: object) => ({ ...base, fontFamily: 'var(--font-body)' }),
 }
 
 const inputStyle: React.CSSProperties = {
@@ -211,34 +239,54 @@ export default function Contact() {
                 <div className="flex flex-col md:flex-row gap-4">
                   <div style={{ flex: 1 }}>
                     <label htmlFor="nationality" style={labelStyle}>{t('labelNationality')}</label>
-                    <select id="nationality" name="nationality" required value={form.nationality} onChange={handleChange} style={{ ...inputStyle, cursor: 'pointer' }}>
-                      <option value="" disabled>{t('placeholderNationality')}</option>
-                      {COUNTRIES.map((c) => <option key={c} value={c}>{c}</option>)}
-                    </select>
+                    <Select
+                      inputId="nationality"
+                      options={COUNTRY_OPTIONS}
+                      placeholder={t('placeholderNationality')}
+                      value={form.nationality ? { value: form.nationality, label: form.nationality } : null}
+                      onChange={(opt) => setForm((prev) => ({ ...prev, nationality: opt?.value ?? '' }))}
+                      isSearchable
+                      required
+                      styles={selectStyles}
+                    />
                   </div>
                   <div style={{ flex: 1 }}>
                     <label htmlFor="currentResidence" style={labelStyle}>{t('labelResidence')}</label>
-                    <select id="currentResidence" name="currentResidence" required value={form.currentResidence} onChange={handleChange} style={{ ...inputStyle, cursor: 'pointer' }}>
-                      <option value="" disabled>{t('placeholderResidence')}</option>
-                      {COUNTRIES.map((c) => <option key={c} value={c}>{c}</option>)}
-                    </select>
+                    <Select
+                      inputId="currentResidence"
+                      options={COUNTRY_OPTIONS}
+                      placeholder={t('placeholderResidence')}
+                      value={form.currentResidence ? { value: form.currentResidence, label: form.currentResidence } : null}
+                      onChange={(opt) => setForm((prev) => ({ ...prev, currentResidence: opt?.value ?? '' }))}
+                      isSearchable
+                      required
+                      styles={selectStyles}
+                    />
                   </div>
                   <div style={{ flex: 1 }}>
                     <label htmlFor="destinationCountry" style={labelStyle}>{t('labelDestination')}</label>
-                    <select id="destinationCountry" name="destinationCountry" required value={form.destinationCountry} onChange={handleChange} style={{ ...inputStyle, cursor: 'pointer' }}>
-                      <option value="" disabled>{t('placeholderDestination')}</option>
-                      {DESTINATION_COUNTRIES.map((c) => <option key={c} value={c}>{c}</option>)}
-                    </select>
+                    <Select
+                      inputId="destinationCountry"
+                      options={DESTINATION_OPTIONS}
+                      placeholder={t('placeholderDestination')}
+                      value={form.destinationCountry ? { value: form.destinationCountry, label: form.destinationCountry } : null}
+                      onChange={(opt) => setForm((prev) => ({ ...prev, destinationCountry: opt?.value ?? '' }))}
+                      styles={selectStyles}
+                    />
                   </div>
                 </div>
 
                 {/* Service */}
                 <div>
                   <label htmlFor="service" style={labelStyle}>{t('labelService')}</label>
-                  <select id="service" name="service" required value={form.service} onChange={handleChange} style={{ ...inputStyle, cursor: 'pointer' }}>
-                    <option value="" disabled>{t('placeholderService')}</option>
-                    {SERVICES.map((s) => <option key={s} value={s}>{s}</option>)}
-                  </select>
+                  <Select
+                    inputId="service"
+                    options={SERVICE_OPTIONS}
+                    placeholder={t('placeholderService')}
+                    value={form.service ? { value: form.service, label: form.service } : null}
+                    onChange={(opt) => setForm((prev) => ({ ...prev, service: opt?.value ?? '' }))}
+                    styles={selectStyles}
+                  />
                 </div>
 
                 {/* Message */}
