@@ -160,7 +160,7 @@ export async function POST(req: Request) {
 
   const resend = new Resend(process.env.RESEND_API_KEY)
   const { error } = await resend.emails.send({
-    from: 'Avilo Contact Form <onboarding@resend.dev>',
+    from: 'Avilo Contact Form <form-sender@aviloimmigration.com>',
     to: process.env.CONTACT_EMAIL!,
     replyTo: email,
     subject: `New consultation request from ${fullName}`,
