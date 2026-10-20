@@ -72,41 +72,41 @@ export default function ArcAnimation() {
         aria-hidden="true"
       >
         {/* Dashed trail */}
-        <path d={ARC} fill="none" stroke="#ddd8f7" strokeWidth="2" strokeDasharray="5 4" />
+        <path d={ARC} fill="none" stroke="var(--color-tint)" strokeWidth="2" strokeDasharray="5 4" />
 
         {/* Animated arc fill */}
         <path
           className="arc-fill"
           d={ARC}
           fill="none"
-          stroke="#7c6fcd"
+          stroke="var(--color-primary)"
           strokeWidth="2.5"
           strokeLinecap="round"
         />
 
         {/* Origin pin */}
-        <circle cx={x1} cy={y1} r={8} fill="#7c6fcd" />
+        <circle cx={x1} cy={y1} r={8} fill="var(--color-primary)" />
         <circle cx={x1} cy={y1} r={3} fill="white" />
-        <circle className="pulse-origin" cx={x1} cy={y1} fill="none" stroke="#7c6fcd" strokeWidth="1.5" />
+        <circle className="pulse-origin" cx={x1} cy={y1} fill="none" stroke="var(--color-primary)" strokeWidth="1.5" />
 
         {/* Destination pin */}
         <g style={{ opacity: fading ? 0 : 1, transition: 'opacity 0.35s ease' }}>
-          <circle cx={x2} cy={y1} r={8} fill="#7c6fcd" />
+          <circle cx={x2} cy={y1} r={8} fill="var(--color-primary)" />
           <circle cx={x2} cy={y1} r={3} fill="white" />
-          <circle className="pulse-dest" cx={x2} cy={y1} fill="none" stroke="#7c6fcd" strokeWidth="1.5" />
+          <circle className="pulse-dest" cx={x2} cy={y1} fill="none" stroke="var(--color-primary)" strokeWidth="1.5" />
         </g>
 
         {/* Traveling dot — CSS motion path */}
-        <circle className="arc-dot" r={5} fill="#7c6fcd" stroke="white" strokeWidth="2" />
+        <circle className="arc-dot" r={5} fill="var(--color-primary)" stroke="white" strokeWidth="2" />
 
         {/* Labels */}
         <text x={x1} y={y1 + 22} textAnchor="middle" fontSize="11"
-          fontFamily="var(--font-body, Arial)" fontWeight="600" fill="#1a1a2e">
+          fontFamily="var(--font-body, Arial)" fontWeight="600" fill="var(--color-ink)">
           Your country
         </text>
         <text
           x={x2} y={y1 + 22} textAnchor="middle" fontSize="11"
-          fontFamily="var(--font-body, Arial)" fontWeight="600" fill="#7c6fcd"
+          fontFamily="var(--font-body, Arial)" fontWeight="600" fill="var(--color-primary)"
           style={{ opacity: fading ? 0 : 1, transition: 'opacity 0.35s ease' }}
         >
           {DESTINATIONS[destIndex]}

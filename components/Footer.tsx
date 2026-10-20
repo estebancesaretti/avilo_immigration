@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
+import Container from '@/components/Container'
 
 export default function Footer() {
   const t = useTranslations('footer')
@@ -8,15 +9,14 @@ export default function Footer() {
   return (
     <footer
       style={{
-        backgroundColor: 'var(--color-ink)',
-        color: 'var(--color-white)',
-        padding: '3rem 1.5rem',
+        backgroundColor: 'var(--color-white)',
+        color: 'var(--color-ink)',
+        borderTop: '1px solid var(--color-border)',
+        padding: '3rem 0',
       }}
     >
-      <div
+      <Container
         style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
           display: 'flex',
           flexDirection: 'column',
           gap: '2rem',
@@ -26,10 +26,11 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6">
           {/* Logo */}
           <Image
-            src="/logos/logo-mono-white.svg"
+            src="/logos/logo-dark.svg"
             alt="Avilo Immigration"
-            width={120}
-            height={40}
+            width={64}
+            height={23}
+            style={{ height: 'auto' }}
           />
 
           {/* Links */}
@@ -48,8 +49,8 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
+                className="link-ink"
                 style={{
-                  color: 'rgba(255,255,255,0.7)',
                   fontFamily: 'var(--font-body)',
                   fontSize: '0.875rem',
                   textDecoration: 'none',
@@ -64,16 +65,16 @@ export default function Footer() {
         {/* Bottom row */}
         <div
           style={{
-            borderTop: '1px solid rgba(255,255,255,0.1)',
+            borderTop: '1px solid var(--color-border)',
             paddingTop: '1.5rem',
-            color: 'rgba(255,255,255,0.5)',
+            color: 'var(--color-muted)',
             fontFamily: 'var(--font-body)',
             fontSize: '0.8125rem',
           }}
         >
           {t('copyright')}
         </div>
-      </div>
+      </Container>
     </footer>
   )
 }

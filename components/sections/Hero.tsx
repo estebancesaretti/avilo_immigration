@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import ArcAnimation from '@/components/ArcAnimation'
+import Container from '@/components/Container'
 
 export default function Hero() {
   const t = useTranslations('hero')
@@ -10,11 +11,10 @@ export default function Hero() {
     <section
       style={{
         backgroundColor: 'var(--color-bg)',
-        padding: '3.5rem 1.5rem',
+        padding: '3.5rem 0',
       }}
     >
-      <div
-        style={{ maxWidth: '1200px', margin: '0 auto' }}
+      <Container
         className="flex flex-col md:grid md:grid-cols-2 md:items-center gap-8"
       >
         {/* Text side */}
@@ -23,15 +23,15 @@ export default function Hero() {
           <span
             style={{
               display: 'inline-block',
-              backgroundColor: 'var(--color-lavender)',
-              color: 'var(--color-purple)',
+              backgroundColor: 'var(--color-tint)',
+              color: 'var(--color-primary)',
               fontFamily: 'var(--font-body)',
               fontWeight: 600,
               fontSize: '0.8125rem',
               letterSpacing: '0.05em',
               textTransform: 'uppercase',
               padding: '0.375rem 0.875rem',
-              borderRadius: '2rem',
+              borderRadius: 'var(--radius-badge)',
               width: 'fit-content',
             }}
           >
@@ -67,17 +67,17 @@ export default function Hero() {
           <div>
             <Link
               href="#contact"
+              className="btn-primary"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.5rem',
-                backgroundColor: 'var(--color-purple)',
                 color: 'var(--color-white)',
                 fontFamily: 'var(--font-body)',
                 fontWeight: 600,
                 fontSize: '0.9375rem',
                 padding: '0.75rem 1.5rem',
-                borderRadius: '0.75rem',
+                borderRadius: 'var(--radius-control)',
                 textDecoration: 'none',
               }}
             >
@@ -91,14 +91,14 @@ export default function Hero() {
         <div
           className="flex items-center justify-center order-2 md:order-2"
           style={{
-            backgroundColor: 'var(--color-lavender)',
-            borderRadius: '1.5rem',
+            backgroundColor: 'var(--color-tint)',
+            borderRadius: 'var(--radius-card)',
             padding: '1.5rem',
           }}
         >
           <ArcAnimation />
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

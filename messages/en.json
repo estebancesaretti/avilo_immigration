@@ -1,14 +1,20 @@
 {
+  "metadata": {
+    "title": "Avilo Immigration — Expert guidance, clear pricing, support from start to finish.",
+    "description": "Avilo helps individuals and families navigate immigration in Belgium, the Netherlands, Luxembourg and France — with expertise, clarity, and care.",
+    "shareDescription": "Expert immigration guidance in Belgium, the Netherlands, Luxembourg and France."
+  },
   "nav": {
     "services": "Services",
     "about": "About",
     "contact": "Contact",
-    "cta": "Contact us"
+    "cta": "Contact us",
+    "swornTranslations": "Sworn translations"
   },
   "hero": {
     "eyebrow": "Immigration specialists in Europe",
-    "headline": "Immigration can be complex. Your guide does not have to be.",
-    "subheadline": "Avilo guides individuals and families through every step of the immigration process — with expertise, clarity, and care.",
+    "headline": "Immigration experts in the Benelux and France.",
+    "subheadline": "Residence, work, and family permits, handled from start to finish.",
     "ctaPrimary": "Tell us your situation",
     "ctaSecondary": "Explore our services"
   },
@@ -16,36 +22,36 @@
     "title": "How we can help",
     "subtitle": "End-to-end immigration support tailored to your situation.",
     "card1": {
-      "title": "Visa & Permit Applications",
-      "description": "We handle the full application process for work permits, family reunification visas, and long-stay authorizations."
+      "title": "Residence permits",
+      "description": "Applications for long-stay visas and residence permits, prepared and submitted on your behalf."
     },
     "card2": {
-      "title": "Family Reunification",
-      "description": "Bringing families together across borders. We guide you through every document and administrative step."
+      "title": "Family reunification",
+      "description": "Bringing your partner, children, or parents to join you, with every document and requirement covered."
     },
     "card3": {
-      "title": "Integration & Settlement",
-      "description": "Language support, civic integration courses, and guidance to help you build a stable life in your new country."
+      "title": "Integration support",
+      "description": "Guidance on civic integration courses, language requirements, and the practical steps of settling in."
     },
     "card4": {
-      "title": "Asylum & Refugee Support",
-      "description": "Compassionate guidance through the asylum process — from application to recognition, we stand by you at every step."
+      "title": "Asylum support",
+      "description": "Clear guidance through the asylum procedure, from your first application to the final decision."
     },
     "card5": {
-      "title": "Document Legalisation",
-      "description": "Apostille, certified translations, and legalisation of official documents for use in European immigration procedures."
+      "title": "Document legalisation",
+      "description": "Apostilles, sworn translations, and legalisation of official documents for immigration procedures."
     },
     "card6": {
-      "title": "Work Authorization",
-      "description": "Single permits, work visas, and employer sponsorship guidance for professionals relocating to Belgium and the Benelux."
+      "title": "Work permits",
+      "description": "Single permits, work visas, and employer sponsorship for professionals relocating to the Benelux and France."
     },
     "card7": {
-      "title": "Student Visas",
-      "description": "Study permit applications and enrollment support for international students pursuing education in Europe."
+      "title": "Student visas",
+      "description": "Study permit applications for international students admitted to a university in the Benelux or France."
     },
     "card8": {
-      "title": "Appeals & Legal Support",
-      "description": "If your application was refused, we review your case, prepare a strong appeal, and represent your interests before authorities."
+      "title": "Appeals",
+      "description": "If your application was refused, we review the decision and help you prepare a well-founded appeal."
     }
   },
   "whereWeOperate": {
@@ -137,5 +143,163 @@
       "privacy": "Privacy Policy"
     },
     "copyright": "© 2026 Avilo Immigration"
+  },
+  "swornTranslations": {
+    "meta": {
+      "title": "Sworn translations in Belgium | Avilo",
+      "description": "Sworn translations of civil records, court judgments and notarial deeds for Belgian authorities, by a sworn translator registered in Belgium."
+    },
+    "languages": {
+      "en": "English",
+      "nl": "Dutch",
+      "es": "Spanish",
+      "de": "German",
+      "fr": "French"
+    },
+    "hero": {
+      "title": "Sworn translations for Belgian authorities",
+      "sub": "Civil records, court judgments and notarial deeds, translated by a sworn translator registered in Belgium.",
+      "ctaQuote": "Request a quote",
+      "ctaPricing": "See prices"
+    },
+    "translator": {
+      "title": "Your translator",
+      "body1": "Our sworn translator, Elouise Verheyen, is based in Ghent and registered in the Belgian National Register of Sworn Translators under number {vti}.",
+      "body2": "Her Dutch translations use Belgian legal terminology, not terminology from the Netherlands. This matters when a document is filed with a Belgian commune, court or the Immigration Office.",
+      "registerLink": "Check her registration in the official register",
+      "photoAlt": "Elouise Verheyen, sworn translator",
+      "role": "Sworn translator · {vti}"
+    },
+    "pairs": {
+      "title": "Language pairs"
+    },
+    "documents": {
+      "title": "Documents we translate",
+      "civilStatus": {
+        "title": "Civil status",
+        "items": "Birth, marriage and divorce certificates, Spanish Libro de Familia, population register extracts, nationality and residence certificates"
+      },
+      "courtJudgment": {
+        "title": "Court judgments",
+        "items": "Divorce, custody, parental authority"
+      },
+      "notarialDeed": {
+        "title": "Notarial deeds",
+        "items": "Acceptance of inheritance, marriage contracts"
+      },
+      "administrativeDecision": {
+        "title": "Administrative decisions",
+        "items": "For example, German social benefit decisions"
+      },
+      "police": {
+        "title": "Police and criminal-justice documents",
+        "items": "Including European Investigation Orders"
+      },
+      "other": {
+        "title": "Other document"
+      },
+      "uses": "Common uses are family reunification, residence permits, nationality applications, marriage registration and recognition of foreign judgments."
+    },
+    "sworn": {
+      "title": "What makes it a sworn translation",
+      "fidelity": "Full fidelity: nothing is added, left out or corrected. Stamps, seals, signatures and QR codes are described in brackets where they appear.",
+      "certification": "Every page carries \"Voor eensluidende vertaling\". The last page has the certification clause, signature and VTI number.",
+      "delivery": "Delivered as a PDF with a qualified electronic signature, plus a hand-signed copy.",
+      "legalization": "Legalization through FPS Foreign Affairs (eLegalization) is available if the receiving authority asks for it."
+    },
+    "steps": {
+      "title": "How it works",
+      "step1": "Send a scan of your document.",
+      "step2": "Receive a quote within two business days.",
+      "step3": "Pay a 50% deposit.",
+      "step4": "The translation is prepared and certified.",
+      "step5": "Receive the signed PDF and pay the balance. Legalization is optional."
+    },
+    "pricing": {
+      "title": "Pricing",
+      "price": "€0.18",
+      "unit": "per word, VAT included",
+      "minimum": "Minimum €90 for standard documents, €115 for complex ones (VAT included).",
+      "factors": "The final price depends on word count, layout, number of stamps, scan quality and terminology. You get an exact quote after we see the document.",
+      "turnaroundTitle": "Turnaround",
+      "turnaround": "2–3 business days for short documents. Longer projects are scheduled with you."
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "original": {
+        "q": "Do I need to send the original?",
+        "a": "A clear scan or photo is enough to quote and translate. If the authority needs the hand-signed copy, we post or hand it over."
+      },
+      "acceptance": {
+        "q": "Will the authority accept the translation?",
+        "a": "Translations by a sworn translator registered in Belgium are accepted by Belgian authorities. Some ask for legalization as well. Check with the receiving office, or ask us."
+      },
+      "apostille": {
+        "q": "Do I also need an apostille or legalization of the original document?",
+        "a": "That depends on the country that issued it and on the authority receiving it. It is separate from the translation. We can tell you what usually applies."
+      },
+      "payment": {
+        "q": "How do I pay?",
+        "a": "50% when you accept the quote, 50% on delivery."
+      },
+      "privacy": {
+        "q": "What happens to my documents?",
+        "a": "Your files are used only for your translation and are deleted six months after delivery."
+      },
+      "otherPairs": {
+        "q": "Can you translate other language pairs?",
+        "a": "Not at the moment. The pairs above are the ones we certify."
+      }
+    },
+    "form": {
+      "title": "Request a quote",
+      "intro": "Send a scan of your document. You receive a quote within two business days.",
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "optional": "optional",
+      "languagePair": "Language pair",
+      "languagePairPlaceholder": "Select a language pair",
+      "documentType": "Document type",
+      "documentTypePlaceholder": "Select a document type",
+      "authority": "Authority it's for",
+      "authorityPlaceholder": "For example, the commune of Ghent or the Immigration Office",
+      "deadline": "Deadline",
+      "files": "Your document",
+      "filesHint": "PDF, JPG or PNG. Up to {maxFiles} files, {maxFileMb} MB per file, {maxTotalMb} MB in total.",
+      "filesButton": "Choose files",
+      "filesRemove": "Remove {name}",
+      "security": "Your files are sent over an encrypted connection to private storage. They are not publicly accessible, are used only for your translation and are deleted six months after delivery.",
+      "emailInstead": "I'll send my documents by email instead",
+      "emailInsteadHint": "Send them to <mail>{email}</mail> and mention your name.",
+      "message": "Message",
+      "messagePlaceholder": "Anything we should know, such as the number of pages or a reference number.",
+      "consent": "I agree that Avilo processes my details and documents to prepare a quote, as described in the <link>privacy policy</link>.",
+      "submit": "Request a quote",
+      "uploading": "Uploading files…",
+      "sending": "Sending…",
+      "success": "Thanks. We'll review your document and send you a quote within two business days.",
+      "errors": {
+        "invalidEmail": "Please enter a valid email address.",
+        "filesRequired": "Add at least one file, or choose to send your documents by email.",
+        "fileType": "{name} is not a PDF, JPG or PNG file.",
+        "fileSize": "{name} is larger than {maxFileMb} MB.",
+        "totalSize": "Your files are larger than {maxTotalMb} MB in total. Send fewer files, or send them by email.",
+        "tooMany": "You can add up to {maxFiles} files.",
+        "upload": "A file could not be uploaded. Please try again, or send your documents by email.",
+        "generic": "Something went wrong. Please try again, or email us at {email}."
+      }
+    },
+    "email": {
+      "subject": "We received your translation request",
+      "greeting": "Hi {name},",
+      "body": "Thanks for your request. We'll review your document and send you a quote within two business days.",
+      "summaryTitle": "Your request",
+      "filesCount": "{count, plural, one {# file} other {# files}}",
+      "byEmail": "You chose to send your documents by email. Send them to {email}.",
+      "reply": "If you have any questions, reply to this email.",
+      "signoff": "Kind regards,",
+      "team": "Avilo Immigration"
+    }
   }
 }

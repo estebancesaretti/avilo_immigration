@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { Globe } from 'lucide-react'
+import Container from '@/components/Container'
 
 const countries = [
   { key: 'be', flagUrl: 'https://flagcdn.com/w80/be.png' },
@@ -16,10 +17,10 @@ export default function WhereWeOperate() {
     <section
       style={{
         backgroundColor: 'var(--color-bg)',
-        padding: '5rem 1.5rem',
+        padding: '5rem 0',
       }}
     >
-      <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
+      <Container style={{ textAlign: 'center' }}>
         {/* Title */}
         <h2
           style={{
@@ -34,7 +35,7 @@ export default function WhereWeOperate() {
             gap: '0.625rem',
           }}
         >
-          <Globe size={28} color="var(--color-purple)" />
+          <Globe size={28} color="var(--color-primary)" />
           {t('title')}
         </h2>
 
@@ -62,7 +63,7 @@ export default function WhereWeOperate() {
                 style={{
                   width: '80px',
                   height: '54px',
-                  borderRadius: '0.5rem',
+                  borderRadius: 'var(--radius-control)',
                   overflow: 'hidden',
                   border: '1px solid var(--color-border)',
                   position: 'relative',
@@ -101,7 +102,7 @@ export default function WhereWeOperate() {
         >
           {t('caption')}
         </p>
-      </div>
+      </Container>
     </section>
   )
 }

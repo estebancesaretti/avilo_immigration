@@ -1,14 +1,20 @@
 {
+  "metadata": {
+    "title": "Avilo Immigration — Deskundig advies, heldere prijzen, begeleiding van begin tot eind.",
+    "description": "Avilo helpt particulieren en gezinnen met immigratie naar België, Nederland, Luxemburg en Frankrijk — met expertise, duidelijkheid en zorg.",
+    "shareDescription": "Deskundig immigratieadvies in België, Nederland, Luxemburg en Frankrijk."
+  },
   "nav": {
     "services": "Diensten",
     "about": "Over ons",
     "contact": "Contact",
-    "cta": "Boek een consultatie"
+    "cta": "Boek een consultatie",
+    "swornTranslations": "Beëdigde vertalingen"
   },
   "hero": {
     "eyebrow": "Immigratiespecialisten in Europa",
-    "headline": "Uw reis naar een nieuw thuis begint hier",
-    "subheadline": "Avilo begeleidt individuen en gezinnen bij elke stap van het immigratieproces.",
+    "headline": "Immigratie-experts in de Benelux en Frankrijk.",
+    "subheadline": "Verblijfs-, werk- en gezinsvergunningen, van begin tot eind geregeld.",
     "ctaPrimary": "Gratis consultatie",
     "ctaSecondary": "Onze diensten"
   },
@@ -24,7 +30,7 @@
       "description": "Gezinnen samengebracht over grenzen heen. Wij begeleiden u bij elke stap."
     },
     "card3": {
-      "title": "Integratie & Vestiging",
+      "title": "Integratie en Vestiging",
       "description": "Taalondersteuning en inburgeringscursussen om u te helpen een stabiel leven op te bouwen."
     }
   },
@@ -80,5 +86,163 @@
       "privacy": "Privacybeleid"
     },
     "copyright": "© 2025 Avilo Immigration"
+  },
+  "swornTranslations": {
+    "meta": {
+      "title": "Beëdigde vertalingen in België | Avilo",
+      "description": "Beëdigde vertalingen van akten van de burgerlijke stand, vonnissen en notariële akten voor Belgische overheden, door een beëdigd vertaler die in België geregistreerd is."
+    },
+    "languages": {
+      "en": "Engels",
+      "nl": "Nederlands",
+      "es": "Spaans",
+      "de": "Duits",
+      "fr": "Frans"
+    },
+    "hero": {
+      "title": "Beëdigde vertalingen voor Belgische overheden",
+      "sub": "Akten van de burgerlijke stand, vonnissen en notariële akten, vertaald door een beëdigd vertaler die in België geregistreerd is.",
+      "ctaQuote": "Offerte aanvragen",
+      "ctaPricing": "Bekijk de prijzen"
+    },
+    "translator": {
+      "title": "Uw vertaler",
+      "body1": "Onze beëdigd vertaler, Elouise Verheyen, is gevestigd in Gent en ingeschreven in het Belgische Nationaal Register van beëdigd vertalers onder nummer {vti}.",
+      "body2": "Haar Nederlandse vertalingen gebruiken Belgische juridische terminologie, niet die uit Nederland. Dat is belangrijk wanneer een document wordt ingediend bij een Belgische gemeente, een rechtbank of de Dienst Vreemdelingenzaken.",
+      "registerLink": "Controleer haar inschrijving in het officiële register",
+      "photoAlt": "Elouise Verheyen, beëdigd vertaler",
+      "role": "Beëdigd vertaler · {vti}"
+    },
+    "pairs": {
+      "title": "Taalcombinaties"
+    },
+    "documents": {
+      "title": "Documenten die we vertalen",
+      "civilStatus": {
+        "title": "Burgerlijke stand",
+        "items": "Geboorte-, huwelijks- en echtscheidingsakten, het Spaanse Libro de Familia, uittreksels uit het bevolkingsregister, nationaliteits- en verblijfsattesten"
+      },
+      "courtJudgment": {
+        "title": "Vonnissen",
+        "items": "Echtscheiding, hoederecht, ouderlijk gezag"
+      },
+      "notarialDeed": {
+        "title": "Notariële akten",
+        "items": "Aanvaarding van een nalatenschap, huwelijkscontracten"
+      },
+      "administrativeDecision": {
+        "title": "Administratieve beslissingen",
+        "items": "Bijvoorbeeld Duitse beslissingen over sociale uitkeringen"
+      },
+      "police": {
+        "title": "Politie- en strafrechtelijke documenten",
+        "items": "Waaronder Europese onderzoeksbevelen"
+      },
+      "other": {
+        "title": "Ander document"
+      },
+      "uses": "Ze worden vaak gebruikt voor gezinshereniging, verblijfsvergunningen, nationaliteitsaanvragen, de registratie van een huwelijk en de erkenning van buitenlandse vonnissen."
+    },
+    "sworn": {
+      "title": "Wat maakt een vertaling beëdigd",
+      "fidelity": "Volledige getrouwheid: er wordt niets toegevoegd, weggelaten of verbeterd. Stempels, zegels, handtekeningen en QR-codes worden tussen haakjes beschreven waar ze voorkomen.",
+      "certification": "Elke pagina draagt de vermelding \"Voor eensluidende vertaling\". De laatste pagina bevat de certificeringsformule, de handtekening en het VTI-nummer.",
+      "delivery": "Geleverd als pdf met een gekwalificeerde elektronische handtekening, plus een exemplaar met handgeschreven handtekening.",
+      "legalization": "Legalisatie via de FOD Buitenlandse Zaken (eLegalisatie) is mogelijk als de ontvangende instantie daarom vraagt."
+    },
+    "steps": {
+      "title": "Zo werkt het",
+      "step1": "Stuur een scan van uw document.",
+      "step2": "Ontvang binnen twee werkdagen een offerte.",
+      "step3": "Betaal een voorschot van 50%.",
+      "step4": "De vertaling wordt opgemaakt en beëdigd.",
+      "step5": "Ontvang de ondertekende pdf en betaal het saldo. Legalisatie is optioneel."
+    },
+    "pricing": {
+      "title": "Prijzen",
+      "price": "€ 0,18",
+      "unit": "per woord, btw inbegrepen",
+      "minimum": "Minimum € 90 voor standaarddocumenten, € 115 voor complexe documenten (btw inbegrepen).",
+      "factors": "De uiteindelijke prijs hangt af van het aantal woorden, de opmaak, het aantal stempels, de kwaliteit van de scan en de terminologie. U krijgt een exacte offerte zodra we het document gezien hebben.",
+      "turnaroundTitle": "Levertermijn",
+      "turnaround": "2 à 3 werkdagen voor korte documenten. Grotere opdrachten plannen we samen met u in."
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "original": {
+        "q": "Moet ik het origineel opsturen?",
+        "a": "Een duidelijke scan of foto volstaat om een offerte te maken en te vertalen. Heeft de instantie het exemplaar met handgeschreven handtekening nodig, dan sturen we het op of geven we het persoonlijk af."
+      },
+      "acceptance": {
+        "q": "Aanvaardt de instantie de vertaling?",
+        "a": "Vertalingen van een beëdigd vertaler die in België geregistreerd is, worden door Belgische overheden aanvaard. Sommige vragen daarnaast een legalisatie. Vraag het na bij de ontvangende dienst, of vraag het ons."
+      },
+      "apostille": {
+        "q": "Heb ik ook een apostille of legalisatie van het originele document nodig?",
+        "a": "Dat hangt af van het land dat het document heeft uitgereikt en van de instantie die het ontvangt. Dat staat los van de vertaling. We kunnen u zeggen wat meestal van toepassing is."
+      },
+      "payment": {
+        "q": "Hoe betaal ik?",
+        "a": "50% wanneer u de offerte aanvaardt, 50% bij levering."
+      },
+      "privacy": {
+        "q": "Wat gebeurt er met mijn documenten?",
+        "a": "Uw bestanden worden alleen voor uw vertaling gebruikt en worden zes maanden na levering verwijderd."
+      },
+      "otherPairs": {
+        "q": "Kunt u ook andere taalcombinaties vertalen?",
+        "a": "Op dit moment niet. De combinaties hierboven zijn de combinaties waarvoor we beëdigde vertalingen leveren."
+      }
+    },
+    "form": {
+      "title": "Offerte aanvragen",
+      "intro": "Stuur een scan van uw document. U ontvangt binnen twee werkdagen een offerte.",
+      "name": "Volledige naam",
+      "email": "E-mail",
+      "phone": "Telefoon",
+      "optional": "optioneel",
+      "languagePair": "Taalcombinatie",
+      "languagePairPlaceholder": "Kies een taalcombinatie",
+      "documentType": "Soort document",
+      "documentTypePlaceholder": "Kies een soort document",
+      "authority": "Instantie waarvoor het bestemd is",
+      "authorityPlaceholder": "Bijvoorbeeld de stad Gent of de Dienst Vreemdelingenzaken",
+      "deadline": "Gewenste datum",
+      "files": "Uw document",
+      "filesHint": "Pdf, jpg of png. Maximaal {maxFiles} bestanden, {maxFileMb} MB per bestand, {maxTotalMb} MB in totaal.",
+      "filesButton": "Bestanden kiezen",
+      "filesRemove": "{name} verwijderen",
+      "security": "Uw bestanden worden via een versleutelde verbinding naar een privéopslag gestuurd. Ze zijn niet openbaar toegankelijk, worden alleen voor uw vertaling gebruikt en worden zes maanden na levering verwijderd.",
+      "emailInstead": "Ik stuur mijn documenten liever per e-mail",
+      "emailInsteadHint": "Stuur ze naar <mail>{email}</mail> en vermeld uw naam.",
+      "message": "Bericht",
+      "messagePlaceholder": "Alles wat we moeten weten, zoals het aantal pagina's of een referentienummer.",
+      "consent": "Ik ga ermee akkoord dat Avilo mijn gegevens en documenten verwerkt om een offerte op te maken, zoals beschreven in het <link>privacybeleid</link>.",
+      "submit": "Offerte aanvragen",
+      "uploading": "Bestanden worden opgeladen…",
+      "sending": "Bezig met verzenden…",
+      "success": "Bedankt. We bekijken uw document en sturen u binnen twee werkdagen een offerte.",
+      "errors": {
+        "invalidEmail": "Vul een geldig e-mailadres in.",
+        "filesRequired": "Voeg minstens één bestand toe, of kies ervoor om uw documenten per e-mail te sturen.",
+        "fileType": "{name} is geen pdf-, jpg- of png-bestand.",
+        "fileSize": "{name} is groter dan {maxFileMb} MB.",
+        "totalSize": "Uw bestanden zijn samen groter dan {maxTotalMb} MB. Stuur minder bestanden, of stuur ze per e-mail.",
+        "tooMany": "U kunt maximaal {maxFiles} bestanden toevoegen.",
+        "upload": "Een bestand kon niet worden opgeladen. Probeer het opnieuw, of stuur uw documenten per e-mail.",
+        "generic": "Er ging iets mis. Probeer het opnieuw, of mail ons op {email}."
+      }
+    },
+    "email": {
+      "subject": "We hebben uw vertaalaanvraag ontvangen",
+      "greeting": "Beste {name},",
+      "body": "Bedankt voor uw aanvraag. We bekijken uw document en sturen u binnen twee werkdagen een offerte.",
+      "summaryTitle": "Uw aanvraag",
+      "filesCount": "{count, plural, one {# bestand} other {# bestanden}}",
+      "byEmail": "U hebt gekozen om uw documenten per e-mail te sturen. Stuur ze naar {email}.",
+      "reply": "Hebt u vragen? Beantwoord dan gewoon deze e-mail.",
+      "signoff": "Met vriendelijke groeten,",
+      "team": "Avilo Immigration"
+    }
   }
 }

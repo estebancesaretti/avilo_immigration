@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 import { Briefcase, Users, GraduationCap, Shield, FileCheck, Building2, BookOpen, Scale, ChevronDown, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
+import Container from '@/components/Container'
 
 const CARDS = [
   { icon: Briefcase,     titleKey: 'card1.title', descKey: 'card1.description' },
@@ -21,8 +22,8 @@ export default function Services() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section id="services" style={{ backgroundColor: 'var(--color-white)', padding: '5rem 1.5rem' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+    <section id="services" style={{ backgroundColor: 'var(--color-white)', padding: '5rem 0' }}>
+      <Container>
 
         {/* Header */}
         <div style={{ marginBottom: '3rem' }}>
@@ -51,8 +52,8 @@ export default function Services() {
             <div
               key={titleKey}
               style={{
-                backgroundColor: 'var(--color-lavender)',
-                borderRadius: '0.75rem',
+                backgroundColor: 'var(--color-tint)',
+                borderRadius: 'var(--radius-card)',
                 padding: '1.5rem',
                 display: 'flex',
                 flexDirection: 'column',
@@ -63,7 +64,7 @@ export default function Services() {
               onMouseEnter={(e) => {
                 const el = e.currentTarget
                 el.style.transform = 'translateY(-4px)'
-                el.style.boxShadow = '0 8px 24px rgba(124,111,205,0.15)'
+                el.style.boxShadow = '0 8px 24px color-mix(in srgb, var(--color-primary) 15%, transparent)'
               }}
               onMouseLeave={(e) => {
                 const el = e.currentTarget
@@ -73,8 +74,8 @@ export default function Services() {
             >
               <div style={{
                 width: '2.5rem', height: '2.5rem',
-                backgroundColor: 'var(--color-purple)',
-                borderRadius: '0.625rem',
+                backgroundColor: 'var(--color-primary)',
+                borderRadius: 'var(--radius-control)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 flexShrink: 0,
               }}>
@@ -107,8 +108,8 @@ export default function Services() {
                 key={titleKey}
                 style={{
                   border: '1px solid',
-                  borderColor: isOpen ? 'var(--color-purple)' : 'var(--color-border)',
-                  borderRadius: '0.75rem',
+                  borderColor: isOpen ? 'var(--color-primary)' : 'var(--color-border)',
+                  borderRadius: 'var(--radius-card)',
                   overflow: 'hidden',
                   transition: 'border-color 0.2s',
                 }}
@@ -120,7 +121,7 @@ export default function Services() {
                     width: '100%',
                     display: 'flex', alignItems: 'center', gap: '0.875rem',
                     padding: '1rem 1.25rem',
-                    background: isOpen ? 'var(--color-lavender)' : 'var(--color-white)',
+                    background: isOpen ? 'var(--color-tint)' : 'var(--color-white)',
                     border: 'none', cursor: 'pointer',
                     textAlign: 'left',
                     transition: 'background 0.2s',
@@ -128,8 +129,8 @@ export default function Services() {
                 >
                   <div style={{
                     width: '2.25rem', height: '2.25rem', flexShrink: 0,
-                    backgroundColor: 'var(--color-purple)',
-                    borderRadius: '0.5rem',
+                    backgroundColor: 'var(--color-primary)',
+                    borderRadius: 'var(--radius-control)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                   }}>
                     <Icon size={18} color="white" />
@@ -144,7 +145,7 @@ export default function Services() {
                   </span>
                   <ChevronDown
                     size={18}
-                    color="var(--color-purple)"
+                    color="var(--color-primary)"
                     style={{
                       flexShrink: 0,
                       transition: 'transform 0.25s ease',
@@ -181,8 +182,8 @@ export default function Services() {
         >
           <div
             style={{
-              border: '2px dashed var(--color-purple)',
-              borderRadius: '0.75rem',
+              border: '2px dashed var(--color-primary)',
+              borderRadius: 'var(--radius-card)',
               padding: '1.5rem 2rem',
               display: 'flex',
               alignItems: 'center',
@@ -191,10 +192,10 @@ export default function Services() {
               transition: 'background-color 0.2s',
               cursor: 'pointer',
             }}
-            onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = 'var(--color-lavender)' }}
+            onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = 'var(--color-tint)' }}
             onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent' }}
           >
-            <MessageCircle size={28} color="var(--color-purple)" style={{ flexShrink: 0 }} />
+            <MessageCircle size={28} color="var(--color-primary)" style={{ flexShrink: 0 }} />
             <div>
               <p style={{
                 fontFamily: 'var(--font-heading)',
@@ -217,7 +218,7 @@ export default function Services() {
           </div>
         </Link>
 
-      </div>
+      </Container>
     </section>
   )
 }

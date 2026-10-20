@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { Link as IntlLink } from '@/i18n/navigation'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { useState, useEffect, useRef } from 'react'
+import Container from '@/components/Container'
 
 const LOCALES = [
   { code: 'en', label: 'EN', available: true },
@@ -39,7 +40,7 @@ function LangSwitcher({ onSelect }: { onSelect?: () => void }) {
           gap: '0.25rem',
           background: 'none',
           border: '1px solid var(--color-border)',
-          borderRadius: '0.5rem',
+          borderRadius: 'var(--radius-control)',
           padding: '0.375rem 0.625rem',
           cursor: 'pointer',
           fontFamily: 'var(--font-body)',
@@ -68,7 +69,7 @@ function LangSwitcher({ onSelect }: { onSelect?: () => void }) {
             right: 0,
             backgroundColor: 'var(--color-white)',
             border: '1px solid var(--color-border)',
-            borderRadius: '0.625rem',
+            borderRadius: 'var(--radius-control)',
             overflow: 'hidden',
             minWidth: '110px',
             boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
@@ -90,9 +91,9 @@ function LangSwitcher({ onSelect }: { onSelect?: () => void }) {
                   fontFamily: 'var(--font-body)',
                   fontWeight: locale === code ? 700 : 500,
                   fontSize: '0.8125rem',
-                  color: locale === code ? 'var(--color-purple)' : 'var(--color-ink)',
+                  color: locale === code ? 'var(--color-primary)' : 'var(--color-ink)',
                   textDecoration: 'none',
-                  backgroundColor: locale === code ? 'var(--color-lavender)' : 'transparent',
+                  backgroundColor: locale === code ? 'var(--color-tint)' : 'transparent',
                 }}
               >
                 {label}
@@ -145,9 +146,11 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // Absolute paths so the links also work from pages other than the homepage
   const links = [
-    { href: '#services', label: t('services') },
-    { href: '#contact', label: t('contact') },
+    { href: '/#services', label: t('services') },
+    { href: '/sworn-translations', label: t('swornTranslations') },
+    { href: '/#contact', label: t('contact') },
   ]
 
   return (
@@ -164,12 +167,9 @@ export default function Navbar() {
       }}
     >
       {/* ── Main bar ── */}
-      <div
+      <Container
         className="grid-cols-[1fr_1fr] md:grid-cols-[1fr_auto_1fr]"
         style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          padding: '0 1.5rem',
           height: '68px',
           display: 'grid',
           alignItems: 'center',
@@ -180,8 +180,9 @@ export default function Navbar() {
           <Image
             src="/logos/logo-light.svg"
             alt="Avilo Immigration"
-            width={150}
-            height={50}
+            width={80}
+            height={28}
+            style={{ height: 'auto' }}
             priority
           />
         </Link>
@@ -193,7 +194,7 @@ export default function Navbar() {
           style={{ gap: '2rem' }}
         >
           {links.map((link) => (
-            <Link
+            <IntlLink
               key={link.href}
               href={link.href}
               style={{
@@ -205,7 +206,7 @@ export default function Navbar() {
               }}
             >
               {link.label}
-            </Link>
+            </IntlLink>
           ))}
         </nav>
 
@@ -218,22 +219,22 @@ export default function Navbar() {
             style={{ alignItems: 'center', gap: '0.75rem' }}
           >
             <LangSwitcher />
-            <Link
-              href="#contact"
+            <IntlLink
+              href="/#contact"
+              className="btn-primary"
               style={{
-                backgroundColor: 'var(--color-purple)',
                 color: 'var(--color-white)',
                 fontFamily: 'var(--font-body)',
                 fontWeight: 600,
                 fontSize: '0.875rem',
                 padding: '0.5rem 1.25rem',
-                borderRadius: '0.75rem',
+                borderRadius: 'var(--radius-control)',
                 textDecoration: 'none',
                 whiteSpace: 'nowrap',
               }}
             >
               {t('cta')}
-            </Link>
+            </IntlLink>
           </div>
 
           {/* Mobile: hamburger only (no inline display) */}
@@ -247,28 +248,30 @@ export default function Navbar() {
               cursor: 'pointer',
               color: 'var(--color-ink)',
               padding: '0.25rem',
+              // cancel the padding so the icon sits on the container edge
+              marginRight: '-0.25rem',
             }}
           >
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
-      </div>
+      </Container>
 
       {/* ── Mobile drawer ── */}
       {menuOpen && (
-        <div
+        <Container
           className="md:hidden"
           style={{
             backgroundColor: 'var(--color-white)',
             borderTop: '1px solid var(--color-border)',
-            padding: '1.25rem 1.5rem',
+            paddingBlock: '1.25rem',
             display: 'flex',
             flexDirection: 'column',
             gap: '1rem',
           }}
         >
           {links.map((link) => (
-            <Link
+            <IntlLink
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
@@ -281,26 +284,26 @@ export default function Navbar() {
               }}
             >
               {link.label}
-            </Link>
+            </IntlLink>
           ))}
 
-          <Link
-            href="#contact"
+          <IntlLink
+            href="/#contact"
             onClick={() => setMenuOpen(false)}
+            className="btn-primary"
             style={{
-              backgroundColor: 'var(--color-purple)',
               color: 'var(--color-white)',
               fontFamily: 'var(--font-body)',
               fontWeight: 600,
               fontSize: '0.9375rem',
               padding: '0.625rem 1.25rem',
-              borderRadius: '0.75rem',
+              borderRadius: 'var(--radius-control)',
               textDecoration: 'none',
               textAlign: 'center',
             }}
           >
             {t('cta')}
-          </Link>
+          </IntlLink>
 
           <div
             style={{
@@ -310,7 +313,7 @@ export default function Navbar() {
           >
             <LangSwitcher onSelect={() => setMenuOpen(false)} />
           </div>
-        </div>
+        </Container>
       )}
     </header>
   )

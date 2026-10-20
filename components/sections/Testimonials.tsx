@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { Quote } from 'lucide-react'
+import Container from '@/components/Container'
 
 const avatars = [
   'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80',
@@ -28,11 +29,11 @@ export default function Testimonials() {
   return (
     <section
       style={{
-        backgroundColor: 'var(--color-lavender)',
-        padding: '5rem 1.5rem',
+        backgroundColor: 'var(--color-tint)',
+        padding: '5rem 0',
       }}
     >
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <Container>
         {/* Header */}
         <h2
           style={{
@@ -60,7 +61,7 @@ export default function Testimonials() {
               key={card.name}
               style={{
                 backgroundColor: 'var(--color-white)',
-                borderRadius: '0.75rem',
+                borderRadius: 'var(--radius-card)',
                 padding: '2rem',
                 display: 'flex',
                 flexDirection: 'column',
@@ -68,7 +69,7 @@ export default function Testimonials() {
               }}
             >
               {/* Quote icon */}
-              <Quote size={24} color="var(--color-purple)" />
+              <Quote size={24} color="var(--color-primary)" />
 
               {/* Text */}
               <p
@@ -131,7 +132,7 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

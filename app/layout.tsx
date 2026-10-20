@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Libre_Baskerville, Atkinson_Hyperlegible_Next } from 'next/font/google'
+import { SITE_NAME, SITE_URL, sharedOpenGraph, sharedTwitter } from '@/i18n/seo'
 import './globals.css'
 
 const libreBaskerville = Libre_Baskerville({
@@ -17,13 +18,18 @@ const atkinsonHyperlegible = Atkinson_Hyperlegible_Next({
 })
 
 export const metadata: Metadata = {
-  title: 'Avilo Immigration',
-  description: 'Immigration services in Belgium, Netherlands, Luxembourg and France.',
-  metadataBase: new URL('https://avilo.be'),
+  title: SITE_NAME,
+  description: 'Immigration services in Belgium, the Netherlands, Luxembourg and France.',
+  metadataBase: new URL(SITE_URL),
   openGraph: {
-    title: 'Avilo Immigration',
-    description: 'Immigration services in Belgium, Netherlands, Luxembourg and France.',
-    images: ['/images/og-image.jpg'],
+    ...sharedOpenGraph,
+    title: SITE_NAME,
+    description: 'Immigration services in Belgium, the Netherlands, Luxembourg and France.',
+    url: SITE_URL,
+  },
+  twitter: {
+    ...sharedTwitter,
+    title: SITE_NAME,
   },
   icons: {
     icon: [

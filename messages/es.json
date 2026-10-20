@@ -1,14 +1,20 @@
 {
+  "metadata": {
+    "title": "Avilo Immigration — Asesoría experta, precios claros y acompañamiento de principio a fin.",
+    "description": "Avilo ayuda a personas y familias con su proceso migratorio en Bélgica, los Países Bajos, Luxemburgo y Francia, con experiencia, claridad y cercanía.",
+    "shareDescription": "Asesoría migratoria experta en Bélgica, los Países Bajos, Luxemburgo y Francia."
+  },
   "nav": {
     "services": "Servicios",
     "about": "Nosotros",
     "contact": "Contacto",
-    "cta": "Reservar consulta"
+    "cta": "Reservar consulta",
+    "swornTranslations": "Traducciones juradas"
   },
   "hero": {
     "eyebrow": "Especialistas en inmigración en Europa",
-    "headline": "Tu viaje hacia un nuevo hogar comienza aquí",
-    "subheadline": "Avilo guía a personas y familias en cada etapa del proceso de inmigración.",
+    "headline": "Expertos en inmigración en el Benelux y Francia.",
+    "subheadline": "Permisos de residencia, de trabajo y de reagrupación familiar, gestionados de principio a fin.",
     "ctaPrimary": "Consulta gratuita",
     "ctaSecondary": "Nuestros servicios"
   },
@@ -80,5 +86,163 @@
       "privacy": "Política de privacidad"
     },
     "copyright": "© 2025 Avilo Immigration"
+  },
+  "swornTranslations": {
+    "meta": {
+      "title": "Traducciones juradas en Bélgica | Avilo",
+      "description": "Traducciones juradas de documentos del registro civil, sentencias y escrituras notariales para las autoridades belgas, por una traductora jurada inscrita en Bélgica."
+    },
+    "languages": {
+      "en": "Inglés",
+      "nl": "Neerlandés",
+      "es": "Español",
+      "de": "Alemán",
+      "fr": "Francés"
+    },
+    "hero": {
+      "title": "Traducciones juradas para las autoridades belgas",
+      "sub": "Documentos del registro civil, sentencias judiciales y escrituras notariales, traducidos por una traductora jurada inscrita en Bélgica.",
+      "ctaQuote": "Pedir presupuesto",
+      "ctaPricing": "Ver precios"
+    },
+    "translator": {
+      "title": "Tu traductora",
+      "body1": "Nuestra traductora jurada, Elouise Verheyen, trabaja desde Gante y está inscrita en el Registro Nacional belga de traductores jurados con el número {vti}.",
+      "body2": "Sus traducciones al neerlandés usan la terminología jurídica belga, no la de los Países Bajos. Esto es importante cuando un documento se presenta ante un ayuntamiento, un tribunal o la Oficina de Extranjería en Bélgica.",
+      "registerLink": "Comprueba su inscripción en el registro oficial",
+      "photoAlt": "Elouise Verheyen, traductora jurada",
+      "role": "Traductora jurada · {vti}"
+    },
+    "pairs": {
+      "title": "Combinaciones de idiomas"
+    },
+    "documents": {
+      "title": "Documentos que traducimos",
+      "civilStatus": {
+        "title": "Registro civil",
+        "items": "Certificados de nacimiento, matrimonio y divorcio, Libro de Familia español, extractos del registro de población, certificados de nacionalidad y de residencia"
+      },
+      "courtJudgment": {
+        "title": "Sentencias judiciales",
+        "items": "Divorcio, custodia, patria potestad"
+      },
+      "notarialDeed": {
+        "title": "Escrituras notariales",
+        "items": "Aceptación de herencia, capitulaciones matrimoniales"
+      },
+      "administrativeDecision": {
+        "title": "Resoluciones administrativas",
+        "items": "Por ejemplo, resoluciones alemanas sobre prestaciones sociales"
+      },
+      "police": {
+        "title": "Documentos policiales y penales",
+        "items": "Incluidas las órdenes europeas de investigación"
+      },
+      "other": {
+        "title": "Otro documento"
+      },
+      "uses": "Usos habituales: reagrupación familiar, permisos de residencia, solicitudes de nacionalidad, inscripción de matrimonios y reconocimiento de sentencias extranjeras."
+    },
+    "sworn": {
+      "title": "Qué hace que una traducción sea jurada",
+      "fidelity": "Fidelidad total: no se añade, omite ni corrige nada. Los sellos, timbres, firmas y códigos QR se describen entre corchetes donde aparecen.",
+      "certification": "Cada página lleva la mención «Voor eensluidende vertaling». La última página incluye la fórmula de certificación, la firma y el número VTI.",
+      "delivery": "Se entrega en PDF con firma electrónica cualificada, junto con una copia firmada a mano.",
+      "legalization": "La legalización a través del SPF Asuntos Exteriores (eLegalization) está disponible si la autoridad receptora la pide."
+    },
+    "steps": {
+      "title": "Cómo funciona",
+      "step1": "Envía un escaneo de tu documento.",
+      "step2": "Recibe un presupuesto en un plazo de dos días hábiles.",
+      "step3": "Paga un anticipo del 50 %.",
+      "step4": "Se prepara y certifica la traducción.",
+      "step5": "Recibe el PDF firmado y paga el resto. La legalización es opcional."
+    },
+    "pricing": {
+      "title": "Precios",
+      "price": "0,18 €",
+      "unit": "por palabra, IVA incluido",
+      "minimum": "Mínimo de 90 € para documentos estándar y de 115 € para documentos complejos (IVA incluido).",
+      "factors": "El precio final depende del número de palabras, la maquetación, el número de sellos, la calidad del escaneo y la terminología. Recibes un presupuesto exacto cuando vemos el documento.",
+      "turnaroundTitle": "Plazo de entrega",
+      "turnaround": "De 2 a 3 días hábiles para documentos cortos. Los proyectos más largos se planifican contigo."
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "original": {
+        "q": "¿Tengo que enviar el original?",
+        "a": "Un escaneo o una foto nítida bastan para presupuestar y traducir. Si la autoridad necesita la copia firmada a mano, te la enviamos por correo postal o te la entregamos en mano."
+      },
+      "acceptance": {
+        "q": "¿Aceptará la autoridad la traducción?",
+        "a": "Las autoridades belgas aceptan las traducciones de un traductor jurado inscrito en Bélgica. Algunas piden además una legalización. Consúltalo con la oficina receptora o pregúntanos."
+      },
+      "apostille": {
+        "q": "¿Necesito también una apostilla o la legalización del documento original?",
+        "a": "Depende del país que lo expidió y de la autoridad que lo recibe. Es independiente de la traducción. Podemos decirte lo que suele aplicarse."
+      },
+      "payment": {
+        "q": "¿Cómo pago?",
+        "a": "El 50 % cuando aceptas el presupuesto y el 50 % a la entrega."
+      },
+      "privacy": {
+        "q": "¿Qué pasa con mis documentos?",
+        "a": "Tus archivos se usan solo para tu traducción y se eliminan seis meses después de la entrega."
+      },
+      "otherPairs": {
+        "q": "¿Hay otras combinaciones de idiomas?",
+        "a": "Por ahora no. Las combinaciones de arriba son las que certificamos."
+      }
+    },
+    "form": {
+      "title": "Pedir presupuesto",
+      "intro": "Envía un escaneo de tu documento. Recibes un presupuesto en un plazo de dos días hábiles.",
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "optional": "opcional",
+      "languagePair": "Combinación de idiomas",
+      "languagePairPlaceholder": "Elige una combinación",
+      "documentType": "Tipo de documento",
+      "documentTypePlaceholder": "Elige un tipo de documento",
+      "authority": "Autoridad a la que va dirigido",
+      "authorityPlaceholder": "Por ejemplo, el ayuntamiento de Gante o la Oficina de Extranjería",
+      "deadline": "Fecha límite",
+      "files": "Tu documento",
+      "filesHint": "PDF, JPG o PNG. Hasta {maxFiles} archivos, {maxFileMb} MB por archivo y {maxTotalMb} MB en total.",
+      "filesButton": "Elegir archivos",
+      "filesRemove": "Quitar {name}",
+      "security": "Tus archivos se envían por una conexión cifrada a un almacenamiento privado. No son accesibles públicamente, se usan solo para tu traducción y se eliminan seis meses después de la entrega.",
+      "emailInstead": "Prefiero enviar mis documentos por correo electrónico",
+      "emailInsteadHint": "Envíalos a <mail>{email}</mail> e indica tu nombre.",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cualquier cosa que debamos saber, como el número de páginas o un número de referencia.",
+      "consent": "Acepto que Avilo trate mis datos y documentos para preparar un presupuesto, tal como se describe en la <link>política de privacidad</link>.",
+      "submit": "Pedir presupuesto",
+      "uploading": "Subiendo archivos…",
+      "sending": "Enviando…",
+      "success": "Gracias. Revisaremos tu documento y te enviaremos un presupuesto en un plazo de dos días hábiles.",
+      "errors": {
+        "invalidEmail": "Introduce un correo electrónico válido.",
+        "filesRequired": "Añade al menos un archivo, o elige enviar tus documentos por correo electrónico.",
+        "fileType": "{name} no es un archivo PDF, JPG o PNG.",
+        "fileSize": "{name} supera los {maxFileMb} MB.",
+        "totalSize": "Tus archivos superan los {maxTotalMb} MB en total. Envía menos archivos o mándalos por correo electrónico.",
+        "tooMany": "Puedes añadir hasta {maxFiles} archivos.",
+        "upload": "No se pudo subir un archivo. Inténtalo de nuevo o envía tus documentos por correo electrónico.",
+        "generic": "Algo salió mal. Inténtalo de nuevo o escríbenos a {email}."
+      }
+    },
+    "email": {
+      "subject": "Hemos recibido tu solicitud de traducción",
+      "greeting": "Hola, {name}:",
+      "body": "Gracias por tu solicitud. Revisaremos tu documento y te enviaremos un presupuesto en un plazo de dos días hábiles.",
+      "summaryTitle": "Tu solicitud",
+      "filesCount": "{count, plural, one {# archivo} other {# archivos}}",
+      "byEmail": "Has elegido enviar tus documentos por correo electrónico. Envíalos a {email}.",
+      "reply": "Si tienes alguna pregunta, responde a este correo.",
+      "signoff": "Un saludo,",
+      "team": "Avilo Immigration"
+    }
   }
 }

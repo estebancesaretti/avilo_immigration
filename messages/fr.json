@@ -1,14 +1,20 @@
 {
+  "metadata": {
+    "title": "Avilo Immigration — Un accompagnement expert, des tarifs clairs, un suivi du début à la fin.",
+    "description": "Avilo accompagne les particuliers et les familles dans leurs démarches d’immigration en Belgique, aux Pays-Bas, au Luxembourg et en France — avec expertise, clarté et bienveillance.",
+    "shareDescription": "Un accompagnement expert en immigration en Belgique, aux Pays-Bas, au Luxembourg et en France."
+  },
   "nav": {
     "services": "Services",
     "about": "À propos",
     "contact": "Contact",
-    "cta": "Réserver une consultation"
+    "cta": "Réserver une consultation",
+    "swornTranslations": "Traductions jurées"
   },
   "hero": {
     "eyebrow": "Spécialistes en immigration en Europe",
-    "headline": "Votre voyage vers un nouveau chez-vous commence ici",
-    "subheadline": "Avilo accompagne les individus et les familles à chaque étape du processus d'immigration.",
+    "headline": "Experts en immigration au Benelux et en France.",
+    "subheadline": "Titres de séjour, permis de travail et regroupement familial, gérés du début à la fin.",
     "ctaPrimary": "Consultation gratuite",
     "ctaSecondary": "Nos services"
   },
@@ -24,7 +30,7 @@
       "description": "Réunir les familles par-delà les frontières. Nous vous guidons à chaque étape."
     },
     "card3": {
-      "title": "Intégration & Installation",
+      "title": "Intégration et Installation",
       "description": "Soutien linguistique et cours d'intégration civique pour vous aider à construire une vie stable."
     }
   },
@@ -80,5 +86,163 @@
       "privacy": "Politique de confidentialité"
     },
     "copyright": "© 2025 Avilo Immigration"
+  },
+  "swornTranslations": {
+    "meta": {
+      "title": "Traductions jurées en Belgique | Avilo",
+      "description": "Traductions jurées d'actes d'état civil, de jugements et d'actes notariés pour les autorités belges, par une traductrice jurée inscrite en Belgique."
+    },
+    "languages": {
+      "en": "Anglais",
+      "nl": "Néerlandais",
+      "es": "Espagnol",
+      "de": "Allemand",
+      "fr": "Français"
+    },
+    "hero": {
+      "title": "Traductions jurées pour les autorités belges",
+      "sub": "Actes d'état civil, jugements et actes notariés, traduits par une traductrice jurée inscrite en Belgique.",
+      "ctaQuote": "Demander un devis",
+      "ctaPricing": "Voir les tarifs"
+    },
+    "translator": {
+      "title": "Votre traductrice",
+      "body1": "Notre traductrice jurée, Elouise Verheyen, est établie à Gand et inscrite au Registre national belge des traducteurs jurés sous le numéro {vti}.",
+      "body2": "Ses traductions vers le néerlandais utilisent la terminologie juridique belge, et non celle des Pays-Bas. C'est important lorsqu'un document est déposé auprès d'une commune, d'un tribunal ou de l'Office des étrangers en Belgique.",
+      "registerLink": "Vérifier son inscription dans le registre officiel",
+      "photoAlt": "Elouise Verheyen, traductrice jurée",
+      "role": "Traductrice jurée · {vti}"
+    },
+    "pairs": {
+      "title": "Combinaisons linguistiques"
+    },
+    "documents": {
+      "title": "Documents que nous traduisons",
+      "civilStatus": {
+        "title": "État civil",
+        "items": "Actes de naissance, de mariage et de divorce, Libro de Familia espagnol, extraits du registre de la population, certificats de nationalité et de résidence"
+      },
+      "courtJudgment": {
+        "title": "Jugements",
+        "items": "Divorce, garde, autorité parentale"
+      },
+      "notarialDeed": {
+        "title": "Actes notariés",
+        "items": "Acceptation de succession, contrats de mariage"
+      },
+      "administrativeDecision": {
+        "title": "Décisions administratives",
+        "items": "Par exemple, des décisions allemandes en matière de prestations sociales"
+      },
+      "police": {
+        "title": "Documents de police et de justice pénale",
+        "items": "Y compris les décisions d'enquête européennes"
+      },
+      "other": {
+        "title": "Autre document"
+      },
+      "uses": "Utilisations fréquentes : regroupement familial, titres de séjour, demandes de nationalité, enregistrement d'un mariage et reconnaissance de jugements étrangers."
+    },
+    "sworn": {
+      "title": "Ce qui fait une traduction jurée",
+      "fidelity": "Fidélité totale : rien n'est ajouté, omis ni corrigé. Les cachets, sceaux, signatures et codes QR sont décrits entre crochets là où ils apparaissent.",
+      "certification": "Chaque page porte la mention « Voor eensluidende vertaling ». La dernière page comporte la formule de certification, la signature et le numéro VTI.",
+      "delivery": "Livrée en PDF avec une signature électronique qualifiée, ainsi qu'un exemplaire signé à la main.",
+      "legalization": "La légalisation par le SPF Affaires étrangères (eLegalization) est possible si l'autorité destinataire la demande."
+    },
+    "steps": {
+      "title": "Comment ça marche",
+      "step1": "Envoyez une copie scannée de votre document.",
+      "step2": "Recevez un devis dans les deux jours ouvrables.",
+      "step3": "Payez un acompte de 50 %.",
+      "step4": "La traduction est réalisée et certifiée.",
+      "step5": "Recevez le PDF signé et payez le solde. La légalisation est facultative."
+    },
+    "pricing": {
+      "title": "Tarifs",
+      "price": "0,18 €",
+      "unit": "par mot, TVA comprise",
+      "minimum": "Minimum 90 € pour les documents standard, 115 € pour les documents complexes (TVA comprise).",
+      "factors": "Le prix final dépend du nombre de mots, de la mise en page, du nombre de cachets, de la qualité du scan et de la terminologie. Vous recevez un devis exact une fois que nous avons vu le document.",
+      "turnaroundTitle": "Délai",
+      "turnaround": "2 à 3 jours ouvrables pour les documents courts. Les projets plus longs sont planifiés avec vous."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "original": {
+        "q": "Dois-je envoyer l'original ?",
+        "a": "Une copie scannée ou une photo nette suffit pour établir le devis et traduire. Si l'autorité a besoin de l'exemplaire signé à la main, nous l'envoyons par la poste ou le remettons en main propre."
+      },
+      "acceptance": {
+        "q": "L'autorité acceptera-t-elle la traduction ?",
+        "a": "Les traductions réalisées par un traducteur juré inscrit en Belgique sont acceptées par les autorités belges. Certaines demandent aussi une légalisation. Renseignez-vous auprès du service destinataire, ou posez-nous la question."
+      },
+      "apostille": {
+        "q": "Ai-je aussi besoin d'une apostille ou d'une légalisation du document original ?",
+        "a": "Cela dépend du pays qui l'a délivré et de l'autorité qui le reçoit. C'est distinct de la traduction. Nous pouvons vous dire ce qui s'applique habituellement."
+      },
+      "payment": {
+        "q": "Comment payer ?",
+        "a": "50 % lorsque vous acceptez le devis, 50 % à la livraison."
+      },
+      "privacy": {
+        "q": "Que deviennent mes documents ?",
+        "a": "Vos fichiers servent uniquement à votre traduction et sont supprimés six mois après la livraison."
+      },
+      "otherPairs": {
+        "q": "Traduisez-vous d'autres combinaisons linguistiques ?",
+        "a": "Pas pour le moment. Les combinaisons ci-dessus sont celles que nous certifions."
+      }
+    },
+    "form": {
+      "title": "Demander un devis",
+      "intro": "Envoyez une copie scannée de votre document. Vous recevez un devis dans les deux jours ouvrables.",
+      "name": "Nom complet",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "optional": "facultatif",
+      "languagePair": "Combinaison linguistique",
+      "languagePairPlaceholder": "Choisissez une combinaison",
+      "documentType": "Type de document",
+      "documentTypePlaceholder": "Choisissez un type de document",
+      "authority": "Autorité destinataire",
+      "authorityPlaceholder": "Par exemple, la commune de Gand ou l'Office des étrangers",
+      "deadline": "Date souhaitée",
+      "files": "Votre document",
+      "filesHint": "PDF, JPG ou PNG. Jusqu'à {maxFiles} fichiers, {maxFileMb} Mo par fichier, {maxTotalMb} Mo au total.",
+      "filesButton": "Choisir des fichiers",
+      "filesRemove": "Retirer {name}",
+      "security": "Vos fichiers sont envoyés via une connexion chiffrée vers un espace de stockage privé. Ils ne sont pas accessibles publiquement, servent uniquement à votre traduction et sont supprimés six mois après la livraison.",
+      "emailInstead": "Je préfère envoyer mes documents par e-mail",
+      "emailInsteadHint": "Envoyez-les à <mail>{email}</mail> en mentionnant votre nom.",
+      "message": "Message",
+      "messagePlaceholder": "Tout ce que nous devrions savoir, comme le nombre de pages ou un numéro de référence.",
+      "consent": "J'accepte qu'Avilo traite mes données et mes documents pour établir un devis, comme décrit dans la <link>politique de confidentialité</link>.",
+      "submit": "Demander un devis",
+      "uploading": "Envoi des fichiers…",
+      "sending": "Envoi en cours…",
+      "success": "Merci. Nous examinons votre document et vous envoyons un devis dans les deux jours ouvrables.",
+      "errors": {
+        "invalidEmail": "Veuillez saisir une adresse e-mail valide.",
+        "filesRequired": "Ajoutez au moins un fichier, ou choisissez d'envoyer vos documents par e-mail.",
+        "fileType": "{name} n'est pas un fichier PDF, JPG ou PNG.",
+        "fileSize": "{name} dépasse {maxFileMb} Mo.",
+        "totalSize": "Vos fichiers dépassent {maxTotalMb} Mo au total. Envoyez moins de fichiers, ou envoyez-les par e-mail.",
+        "tooMany": "Vous pouvez ajouter jusqu'à {maxFiles} fichiers.",
+        "upload": "Un fichier n'a pas pu être envoyé. Réessayez, ou envoyez vos documents par e-mail.",
+        "generic": "Une erreur s'est produite. Réessayez, ou écrivez-nous à {email}."
+      }
+    },
+    "email": {
+      "subject": "Nous avons bien reçu votre demande de traduction",
+      "greeting": "Bonjour {name},",
+      "body": "Merci pour votre demande. Nous examinons votre document et vous envoyons un devis dans les deux jours ouvrables.",
+      "summaryTitle": "Votre demande",
+      "filesCount": "{count, plural, one {# fichier} other {# fichiers}}",
+      "byEmail": "Vous avez choisi d'envoyer vos documents par e-mail. Envoyez-les à {email}.",
+      "reply": "Une question ? Répondez simplement à cet e-mail.",
+      "signoff": "Bien cordialement,",
+      "team": "Avilo Immigration"
+    }
   }
 }

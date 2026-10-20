@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl'
+import Container from '@/components/Container'
 
 const STEPS = ['step1', 'step2', 'step3', 'step4'] as const
 
@@ -6,8 +7,8 @@ export default function HowItWorks() {
   const t = useTranslations('howItWorks')
 
   return (
-    <section style={{ backgroundColor: 'var(--color-bg)', padding: '5rem 1.5rem' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+    <section style={{ backgroundColor: 'var(--color-bg)', padding: '5rem 0' }}>
+      <Container>
 
         {/* Header */}
         <div style={{ marginBottom: '4rem' }}>
@@ -50,7 +51,7 @@ export default function HowItWorks() {
                   width: '52px',
                   height: '52px',
                   borderRadius: '50%',
-                  backgroundColor: 'var(--color-purple)',
+                  backgroundColor: 'var(--color-primary)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -89,7 +90,7 @@ export default function HowItWorks() {
                   fontFamily: 'var(--font-body)',
                   fontSize: '0.8125rem',
                   fontWeight: 600,
-                  color: 'var(--color-purple)',
+                  color: 'var(--color-primary)',
                   letterSpacing: '0.04em',
                   textTransform: 'uppercase',
                   margin: '0 0 0.375rem',
@@ -120,7 +121,7 @@ export default function HowItWorks() {
           ))}
         </div>
 
-      </div>
+      </Container>
     </section>
   )
 }
