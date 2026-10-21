@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import ArcAnimation from '@/components/ArcAnimation'
+import GlobeLoader from '@/components/GlobeLoader'
 import Container from '@/components/Container'
 
 export default function Hero() {
@@ -87,16 +87,10 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Arc animation — below text on mobile, right column on desktop */}
-        <div
-          className="flex items-center justify-center order-2 md:order-2"
-          style={{
-            backgroundColor: 'var(--color-tint)',
-            borderRadius: 'var(--radius-card)',
-            padding: '1.5rem',
-          }}
-        >
-          <ArcAnimation />
+        {/* Globe — below text on mobile, right column on desktop */}
+        <div className="flex items-center justify-center order-2 md:order-2">
+          <GlobeLoader />
+          <p className="sr-only">{t('globe.srDescription')}</p>
         </div>
       </Container>
     </section>

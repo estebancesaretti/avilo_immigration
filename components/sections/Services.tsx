@@ -204,7 +204,7 @@ export default function Services() {
                 color: 'var(--color-ink)',
                 margin: '0 0 0.25rem',
               }}>
-                Don't see your situation here?
+                Don&apos;t see your situation here?
               </p>
               <p style={{
                 fontFamily: 'var(--font-body)',
@@ -212,7 +212,7 @@ export default function Services() {
                 color: 'var(--color-muted)',
                 margin: 0,
               }}>
-                Reach out anyway — we'll let you know if we can help.
+                Reach out anyway. We&apos;ll let you know if we can help.
               </p>
             </div>
           </div>

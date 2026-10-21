@@ -6,17 +6,10 @@ export const TRANSLATIONS_EMAIL = 'translations@aviloimmigration.com'
 export const REGISTER_URL = 'https://justsearch.just.fgov.be/national-registry-search/translator'
 export const VTI_NUMBER = 'VTI112148467'
 
-// Each certified direction is a separate option in the form.
-export const LANGUAGE_DIRECTIONS = ['en-nl', 'nl-en', 'es-nl', 'nl-es', 'de-nl', 'nl-de', 'nl-fr'] as const
-export type LanguageDirection = (typeof LANGUAGE_DIRECTIONS)[number]
-
-// The four pairs shown as cards: "both" means certified in either direction.
-export const LANGUAGE_PAIRS = [
-  { from: 'en', to: 'nl', both: true },
-  { from: 'es', to: 'nl', both: true },
-  { from: 'de', to: 'nl', both: true },
-  { from: 'nl', to: 'fr', both: false },
-] as const
+// Every combination between these four languages is certified, in both
+// directions. This order is used for the language tags and the From/To selects.
+export const LANGUAGES = ['nl', 'fr', 'en', 'es'] as const
+export type LanguageCode = (typeof LANGUAGES)[number]
 
 export const DOCUMENT_TYPES = ['civilStatus', 'courtJudgment', 'notarialDeed', 'administrativeDecision', 'police', 'other'] as const
 export type DocumentType = (typeof DOCUMENT_TYPES)[number]

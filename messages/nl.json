@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Avilo Immigration — Deskundig advies, heldere prijzen, begeleiding van begin tot eind.",
-    "description": "Avilo helpt particulieren en gezinnen met immigratie naar België, Nederland, Luxemburg en Frankrijk — met expertise, duidelijkheid en zorg.",
+    "title": "Avilo Immigration | Deskundig advies, heldere prijzen, begeleiding van begin tot eind.",
+    "description": "Avilo helpt particulieren en gezinnen met immigratie naar België, Nederland, Luxemburg en Frankrijk, met expertise, duidelijkheid en zorg.",
     "shareDescription": "Deskundig immigratieadvies in België, Nederland, Luxemburg en Frankrijk."
   },
   "nav": {
@@ -16,7 +16,11 @@
     "headline": "Immigratie-experts in de Benelux en Frankrijk.",
     "subheadline": "Verblijfs-, werk- en gezinsvergunningen, van begin tot eind geregeld.",
     "ctaPrimary": "Gratis consultatie",
-    "ctaSecondary": "Onze diensten"
+    "ctaSecondary": "Onze diensten",
+    "globe": {
+      "yourLocation": "Uw locatie",
+      "srDescription": "We begeleiden mensen van overal ter wereld naar België, Nederland, Luxemburg en Frankrijk."
+    }
   },
   "services": {
     "title": "Hoe wij kunnen helpen",
@@ -85,7 +89,8 @@
       "contact": "Contact",
       "privacy": "Privacybeleid"
     },
-    "copyright": "© 2025 Avilo Immigration"
+    "copyright": "© 2025 Avilo Immigration",
+    "legal": "Avilo is een handelsnaam van Chiltepin BV · Einde Were 274 bus 302, 9000 Gent · BE 1007.754.576"
   },
   "swornTranslations": {
     "meta": {
@@ -96,25 +101,21 @@
       "en": "Engels",
       "nl": "Nederlands",
       "es": "Spaans",
-      "de": "Duits",
       "fr": "Frans"
     },
     "hero": {
       "title": "Beëdigde vertalingen voor Belgische overheden",
       "sub": "Akten van de burgerlijke stand, vonnissen en notariële akten, vertaald door een beëdigd vertaler die in België geregistreerd is.",
       "ctaQuote": "Offerte aanvragen",
-      "ctaPricing": "Bekijk de prijzen"
+      "ctaPricing": "Bekijk de prijzen",
+      "animationDescription": "Beëdigde vertalingen tussen het Nederlands, Frans, Engels en Spaans"
     },
     "translator": {
       "title": "Uw vertaler",
-      "body1": "Onze beëdigd vertaler, Elouise Verheyen, is gevestigd in Gent en ingeschreven in het Belgische Nationaal Register van beëdigd vertalers onder nummer {vti}.",
-      "body2": "Haar Nederlandse vertalingen gebruiken Belgische juridische terminologie, niet die uit Nederland. Dat is belangrijk wanneer een document wordt ingediend bij een Belgische gemeente, een rechtbank of de Dienst Vreemdelingenzaken.",
       "registerLink": "Controleer haar inschrijving in het officiële register",
       "photoAlt": "Elouise Verheyen, beëdigd vertaler",
-      "role": "Beëdigd vertaler · {vti}"
-    },
-    "pairs": {
-      "title": "Taalcombinaties"
+      "role": "Beëdigd vertaler · {vti}",
+      "body": "Elouise Verheyen is beëdigd vertaler, geregistreerd in Gent. Ze vertaalt tussen deze talen, in elke combinatie:"
     },
     "documents": {
       "title": "Documenten die we vertalen",
@@ -132,7 +133,7 @@
       },
       "administrativeDecision": {
         "title": "Administratieve beslissingen",
-        "items": "Bijvoorbeeld Duitse beslissingen over sociale uitkeringen"
+        "items": "Bijvoorbeeld beslissingen over sociale uitkeringen"
       },
       "police": {
         "title": "Politie- en strafrechtelijke documenten",
@@ -177,6 +178,10 @@
         "q": "Aanvaardt de instantie de vertaling?",
         "a": "Vertalingen van een beëdigd vertaler die in België geregistreerd is, worden door Belgische overheden aanvaard. Sommige vragen daarnaast een legalisatie. Vraag het na bij de ontvangende dienst, of vraag het ons."
       },
+      "belgianDutch": {
+        "q": "Is het Nederlands geschikt voor Belgische overheden?",
+        "a": "Ja. De vertalingen gebruiken Belgische juridische terminologie, waarmee gemeenten, rechtbanken en de Dienst Vreemdelingenzaken werken."
+      },
       "apostille": {
         "q": "Heb ik ook een apostille of legalisatie van het originele document nodig?",
         "a": "Dat hangt af van het land dat het document heeft uitgereikt en van de instantie die het ontvangt. Dat staat los van de vertaling. We kunnen u zeggen wat meestal van toepassing is."
@@ -187,11 +192,11 @@
       },
       "privacy": {
         "q": "Wat gebeurt er met mijn documenten?",
-        "a": "Uw bestanden worden alleen voor uw vertaling gebruikt en worden zes maanden na levering verwijderd."
+        "a": "Uw bestanden worden alleen voor uw vertaling gebruikt en worden zes maanden na het opladen verwijderd."
       },
-      "otherPairs": {
-        "q": "Kunt u ook andere taalcombinaties vertalen?",
-        "a": "Op dit moment niet. De combinaties hierboven zijn de combinaties waarvoor we beëdigde vertalingen leveren."
+      "otherLanguages": {
+        "q": "Vertaalt u ook andere talen?",
+        "a": "Op dit moment niet. We leveren beëdigde vertalingen tussen het Nederlands, Frans, Engels en Spaans."
       }
     },
     "form": {
@@ -201,8 +206,10 @@
       "email": "E-mail",
       "phone": "Telefoon",
       "optional": "optioneel",
-      "languagePair": "Taalcombinatie",
-      "languagePairPlaceholder": "Kies een taalcombinatie",
+      "from": "Van",
+      "fromPlaceholder": "Brontaal",
+      "to": "Naar",
+      "toPlaceholder": "Doeltaal",
       "documentType": "Soort document",
       "documentTypePlaceholder": "Kies een soort document",
       "authority": "Instantie waarvoor het bestemd is",
@@ -212,7 +219,7 @@
       "filesHint": "Pdf, jpg of png. Maximaal {maxFiles} bestanden, {maxFileMb} MB per bestand, {maxTotalMb} MB in totaal.",
       "filesButton": "Bestanden kiezen",
       "filesRemove": "{name} verwijderen",
-      "security": "Uw bestanden worden via een versleutelde verbinding naar een privéopslag gestuurd. Ze zijn niet openbaar toegankelijk, worden alleen voor uw vertaling gebruikt en worden zes maanden na levering verwijderd.",
+      "security": "Uw bestanden worden via een versleutelde verbinding naar een privéopslag gestuurd. Ze zijn niet openbaar toegankelijk, worden alleen voor uw vertaling gebruikt en worden zes maanden na het opladen verwijderd.",
       "emailInstead": "Ik stuur mijn documenten liever per e-mail",
       "emailInsteadHint": "Stuur ze naar <mail>{email}</mail> en vermeld uw naam.",
       "message": "Bericht",
@@ -230,7 +237,8 @@
         "totalSize": "Uw bestanden zijn samen groter dan {maxTotalMb} MB. Stuur minder bestanden, of stuur ze per e-mail.",
         "tooMany": "U kunt maximaal {maxFiles} bestanden toevoegen.",
         "upload": "Een bestand kon niet worden opgeladen. Probeer het opnieuw, of stuur uw documenten per e-mail.",
-        "generic": "Er ging iets mis. Probeer het opnieuw, of mail ons op {email}."
+        "generic": "Er ging iets mis. Probeer het opnieuw, of mail ons op {email}.",
+        "sameLanguage": "Kies twee verschillende talen."
       }
     },
     "email": {
@@ -243,6 +251,12 @@
       "reply": "Hebt u vragen? Beantwoord dan gewoon deze e-mail.",
       "signoff": "Met vriendelijke groeten,",
       "team": "Avilo Immigration"
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacybeleid | Avilo Immigration",
+      "description": "Hoe Avilo Immigration uw persoonsgegevens verzamelt, gebruikt en beschermt."
     }
   }
 }

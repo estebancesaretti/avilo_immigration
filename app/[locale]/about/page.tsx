@@ -2,9 +2,9 @@ import { setRequestLocale } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
 import { localizedMetadata } from '@/i18n/seo'
 import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, MapPin, Users, Heart } from 'lucide-react'
 import Container from '@/components/Container'
@@ -13,16 +13,22 @@ type Props = {
   params: Promise<{ locale: string }>
 }
 
+// Unpublished for now: the route returns 404 until this is set to true.
+// When publishing, also add '/about' back to PAGES in app/sitemap.ts.
+const PUBLISHED = false
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  if (!PUBLISHED) notFound()
   const { locale } = await params
   return localizedMetadata(locale, '/about')
 }
 
 export default async function AboutPage({ params }: Props) {
+  if (!PUBLISHED) notFound()
   const { locale } = await params
   setRequestLocale(locale)
 
@@ -33,17 +39,8 @@ export default async function AboutPage({ params }: Props) {
 
         {/* ── Hero ── */}
         <section style={{ backgroundColor: 'var(--color-bg)', padding: '5rem 0' }}>
-          <Container
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: '5rem',
-              alignItems: 'center',
-            }}
-            className="grid-cols-1 md:grid-cols-2"
-          >
-            {/* Text */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          <Container>
+            <div style={{ maxWidth: '760px', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <span style={{
                 display: 'inline-block',
                 backgroundColor: 'var(--color-tint)',
@@ -68,7 +65,7 @@ export default async function AboutPage({ params }: Props) {
                 color: 'var(--color-ink)',
                 margin: 0,
               }}>
-                Immigration should feel manageable — not overwhelming.
+                Immigration should feel manageable, not overwhelming.
               </h1>
 
               <p style={{
@@ -80,46 +77,6 @@ export default async function AboutPage({ params }: Props) {
               }}>
                 Avilo was built on a simple belief: that every person navigating immigration deserves clear guidance, honest advice, and someone who actually understands their specific situation.
               </p>
-            </div>
-
-            {/* Photo */}
-            <div style={{
-              position: 'relative',
-              borderRadius: 'var(--radius-card)',
-              overflow: 'hidden',
-              aspectRatio: '4/5',
-              maxHeight: '520px',
-            }} className="hidden md:block">
-              <Image
-                src="/images/elouise.jpg"
-                alt="Elouise Verheyen — Founder of Avilo Immigration"
-                fill
-                style={{ objectFit: 'cover' }}
-                priority
-                sizes="50vw"
-              />
-              <div style={{
-                position: 'absolute',
-                inset: 0,
-                backgroundColor: 'color-mix(in srgb, var(--color-primary) 6%, transparent)',
-              }} />
-              {/* Name card */}
-              <div style={{
-                position: 'absolute',
-                bottom: '1.5rem',
-                left: '1.5rem',
-                backgroundColor: 'white',
-                borderRadius: 'var(--radius-card)',
-                padding: '0.875rem 1.25rem',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-              }}>
-                <p style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '1rem', color: 'var(--color-ink)', margin: '0 0 0.125rem' }}>
-                  Elouise Verheyen
-                </p>
-                <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', color: 'var(--color-muted)', margin: 0 }}>
-                  Founder, Avilo Immigration
-                </p>
-              </div>
             </div>
           </Container>
         </section>
@@ -138,10 +95,10 @@ export default async function AboutPage({ params }: Props) {
                 Why Avilo exists
               </h2>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.0625rem', lineHeight: 1.8, color: 'var(--color-muted)', margin: 0 }}>
-                Immigration is complicated — and many people struggle to understand what actually applies to their specific situation. After years of working with companies, clients, and universities across different immigration cases, Elouise saw the same problem repeat itself: people were either overwhelmed by bureaucracy, given fragmented information, or sold a service before anyone had taken the time to understand their situation.
+                Immigration is complicated, and many people struggle to understand what actually applies to their specific situation. After years of working with companies, clients, and universities across different immigration cases, we saw the same problem repeat itself: people were either overwhelmed by bureaucracy, given fragmented information, or sold a service before anyone had taken the time to understand their situation.
               </p>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.0625rem', lineHeight: 1.8, color: 'var(--color-muted)', margin: 0 }}>
-                Avilo was created to do things differently. We start with the person — their circumstances, their goals, and what they actually need — before anything else. Not a list of standard services. Not a generic intake form. A real assessment of the case.
+                Avilo was created to do things differently. We start with the person: their circumstances, their goals, and what they actually need. Not a list of standard services. Not a generic intake form. A real assessment of the case.
               </p>
             </div>
           </Container>
@@ -171,7 +128,7 @@ export default async function AboutPage({ params }: Props) {
                 {
                   icon: Heart,
                   title: 'Personal from start to finish',
-                  desc: 'Elouise is directly involved in every case. You deal with the person who knows your situation — not a different contact each time.',
+                  desc: 'The same person handles your case from start to finish. You deal with the person who knows your situation, not a different contact each time.',
                 },
                 {
                   icon: MapPin,
@@ -221,10 +178,10 @@ export default async function AboutPage({ params }: Props) {
                 Where we operate
               </h2>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.0625rem', lineHeight: 1.8, color: 'var(--color-muted)', margin: 0 }}>
-                Our primary focus is Belgium and the Netherlands, with services centered around immigration, residency, and related administrative procedures. We are a small, focused team — and we prefer it that way. It means every client gets the same level of attention, regardless of case complexity.
+                Our primary focus is Belgium and the Netherlands, with services centered around immigration, residency, and related administrative procedures. We are a small, focused team, and we prefer it that way. It means every client gets the same level of attention, regardless of case complexity.
               </p>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.0625rem', lineHeight: 1.8, color: 'var(--color-muted)', margin: 0 }}>
-                Avilo is a young, founder-led company. We are not a large immigration firm with dozens of case managers. We are building something intentionally smaller — where the personal approach is not a marketing line, but how things actually work.
+                Avilo is a young, founder-led company. We are not a large immigration firm with dozens of case managers. We are building something intentionally smaller, where the personal approach is not a marketing line but how things actually work.
               </p>
             </div>
           </Container>
@@ -244,7 +201,7 @@ export default async function AboutPage({ params }: Props) {
                 Ready to talk about your situation?
               </h2>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.0625rem', color: 'var(--color-muted)', margin: 0 }}>
-                Start with the contact form — we'll take it from there.
+                Start with the contact form. We&apos;ll take it from there.
               </p>
               <Link
                 href="/#contact"

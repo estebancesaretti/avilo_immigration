@@ -8,8 +8,9 @@ import Footer from '@/components/Footer'
 import Container from '@/components/Container'
 import Accordion from '@/components/Accordion'
 import QuoteForm from '@/components/sworn-translations/QuoteForm'
+import TranslationAnimation from '@/components/TranslationAnimation'
 import { ArrowRight, BadgeCheck, Clock, ExternalLink, Gavel, Landmark, ScrollText, ShieldCheck, Stamp } from 'lucide-react'
-import { LANGUAGE_PAIRS, REGISTER_URL, VTI_NUMBER } from '@/lib/sworn-translations'
+import { LANGUAGES, REGISTER_URL, VTI_NUMBER } from '@/lib/sworn-translations'
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -25,7 +26,7 @@ const DOCUMENT_GROUPS = [
 
 const SWORN_POINTS = ['fidelity', 'certification', 'delivery', 'legalization'] as const
 const STEPS = ['step1', 'step2', 'step3', 'step4', 'step5'] as const
-const FAQ = ['original', 'acceptance', 'apostille', 'payment', 'privacy', 'otherPairs'] as const
+const FAQ = ['original', 'acceptance', 'belgianDutch', 'apostille', 'payment', 'privacy', 'otherLanguages'] as const
 
 const h2Style: React.CSSProperties = {
   fontFamily: 'var(--font-heading)',
@@ -78,7 +79,8 @@ export default async function SwornTranslationsPage({ params }: Props) {
 
         {/* ── Hero ── */}
         <section style={{ backgroundColor: 'var(--color-bg)', padding: '4.5rem 0' }}>
-          <Container>
+          {/* Text left, document animation right; animation below the text on mobile */}
+          <Container className="flex flex-col md:grid md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] md:items-center gap-10">
             <div style={{ maxWidth: '760px', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <h1 style={{
                 fontFamily: 'var(--font-heading)',
@@ -124,6 +126,7 @@ export default async function SwornTranslationsPage({ params }: Props) {
                 </a>
               </div>
             </div>
+            <TranslationAnimation />
           </Container>
         </section>
 
@@ -145,8 +148,23 @@ export default async function SwornTranslationsPage({ params }: Props) {
             </figure>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', maxWidth: '640px' }}>
               <h2 style={{ ...h2Style, margin: 0 }}>{t('translator.title')}</h2>
-              <p style={bodyStyle}>{t('translator.body1', { vti: VTI_NUMBER })}</p>
-              <p style={bodyStyle}>{t('translator.body2')}</p>
+              <p style={bodyStyle}>{t('translator.body')}</p>
+              <ul style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', listStyle: 'none', padding: 0, margin: 0 }}>
+                {LANGUAGES.map((code) => (
+                  <li key={code} style={{
+                    border: '1px solid var(--color-primary)',
+                    borderRadius: 'var(--radius-badge)',
+                    color: 'var(--color-primary)',
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '13px',
+                    fontWeight: 600,
+                    lineHeight: 1,
+                    padding: '0.4375rem 0.875rem',
+                  }}>
+                    {t(`languages.${code}`)}
+                  </li>
+                ))}
+              </ul>
               <a
                 href={REGISTER_URL}
                 target="_blank"
@@ -161,32 +179,8 @@ export default async function SwornTranslationsPage({ params }: Props) {
           </Container>
         </section>
 
-        {/* ── Language pairs ── */}
-        <section style={{ backgroundColor: 'var(--color-bg)', padding: '5rem 0' }}>
-          <Container>
-            <h2 style={h2Style}>{t('pairs.title')}</h2>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              {LANGUAGE_PAIRS.map(({ from, to, both }) => (
-                <li key={`${from}-${to}`} style={{
-                  backgroundColor: 'var(--color-tint)',
-                  borderRadius: 'var(--radius-card)',
-                  padding: '1.25rem 1.5rem',
-                  fontFamily: 'var(--font-heading)',
-                  fontWeight: 700,
-                  fontSize: '1.0625rem',
-                  color: 'var(--color-ink)',
-                }}>
-                  {t(`languages.${from}`)}{' '}
-                  <span style={{ color: 'var(--color-primary)' }} aria-hidden="true">{both ? '↔' : '→'}</span>
-                  {' '}{t(`languages.${to}`)}
-                </li>
-              ))}
-            </ul>
-          </Container>
-        </section>
-
         {/* ── Documents we translate ── */}
-        <section style={{ backgroundColor: 'var(--color-white)', padding: '5rem 0' }}>
+        <section style={{ backgroundColor: 'var(--color-bg)', padding: '5rem 0' }}>
           <Container>
             <h2 style={h2Style}>{t('documents.title')}</h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
@@ -216,7 +210,7 @@ export default async function SwornTranslationsPage({ params }: Props) {
         </section>
 
         {/* ── What makes it a sworn translation ── */}
-        <section style={{ backgroundColor: 'var(--color-bg)', padding: '5rem 0' }}>
+        <section style={{ backgroundColor: 'var(--color-white)', padding: '5rem 0' }}>
           <Container>
             <h2 style={h2Style}>{t('sworn.title')}</h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-5" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
@@ -237,7 +231,7 @@ export default async function SwornTranslationsPage({ params }: Props) {
         </section>
 
         {/* ── How it works ── */}
-        <section style={{ backgroundColor: 'var(--color-white)', padding: '5rem 0' }}>
+        <section style={{ backgroundColor: 'var(--color-bg)', padding: '5rem 0' }}>
           <Container>
             <h2 style={h2Style}>{t('steps.title')}</h2>
             <ol className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-5" style={{ listStyle: 'none', padding: 0, margin: 0 }}>

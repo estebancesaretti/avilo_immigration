@@ -5,7 +5,7 @@ import { SITE_URL, languageAlternates, localizedPath } from '@/i18n/seo'
 const PAGES = [
   { path: '/', priority: 1 },
   { path: '/sworn-translations', priority: 0.9 },
-  { path: '/about', priority: 0.8 },
+  { path: '/privacy', priority: 0.3 },
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

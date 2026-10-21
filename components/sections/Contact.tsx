@@ -70,6 +70,7 @@ const initial: FormState = {
 export default function Contact() {
   const t = useTranslations('contact')
   const [form, setForm] = useState<FormState>(initial)
+  const [consent, setConsent] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState('')
@@ -96,7 +97,7 @@ export default function Contact() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, consent }),
       })
       if (res.ok) {
         setSubmitted(true)
@@ -237,7 +238,18 @@ export default function Contact() {
                     <label htmlFor="message" style={labelStyle}>{t('labelMessage')}</label>
                     <textarea id="message" name="message" required rows={4} placeholder={t('placeholderMessage')} value={form.message} onChange={handleChange} style={{ ...inputStyle, resize: 'vertical' }} />
                   </div>
-  
+
+                  {/* Consent (required) */}
+                  <label style={{ display: 'flex', gap: '0.625rem', alignItems: 'flex-start', cursor: 'pointer', fontFamily: 'var(--font-body)', fontSize: '0.875rem', lineHeight: 1.55, color: 'var(--color-ink)' }}>
+                    <input type="checkbox" name="consent" required checked={consent} onChange={(e) => setConsent(e.target.checked)} style={{ marginTop: '0.2rem', accentColor: 'var(--color-primary)' }} />
+                    <span>
+                      {t.rich('consent', {
+                        // new tab so a half-filled form isn't lost
+                        link: (chunks) => <a href="/privacy" target="_blank" rel="noopener" className="link-ink" style={{ textDecoration: 'underline' }}>{chunks}</a>,
+                      })}
+                    </span>
+                  </label>
+
                   {error && (
                     <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: '#dc2626', margin: 0 }}>
                       {error}

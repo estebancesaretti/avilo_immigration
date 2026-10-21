@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Avilo Immigration — Expert guidance, clear pricing, support from start to finish.",
-    "description": "Avilo helps individuals and families navigate immigration in Belgium, the Netherlands, Luxembourg and France — with expertise, clarity, and care.",
+    "title": "Avilo Immigration | Expert guidance, clear pricing, support from start to finish.",
+    "description": "Avilo helps individuals and families navigate immigration in Belgium, the Netherlands, Luxembourg and France, with expertise, clarity, and care.",
     "shareDescription": "Expert immigration guidance in Belgium, the Netherlands, Luxembourg and France."
   },
   "nav": {
@@ -16,7 +16,11 @@
     "headline": "Immigration experts in the Benelux and France.",
     "subheadline": "Residence, work, and family permits, handled from start to finish.",
     "ctaPrimary": "Tell us your situation",
-    "ctaSecondary": "Explore our services"
+    "ctaSecondary": "Explore our services",
+    "globe": {
+      "yourLocation": "Your location",
+      "srDescription": "We guide people from anywhere in the world to Belgium, the Netherlands, Luxembourg and France."
+    }
   },
   "services": {
     "title": "How we can help",
@@ -66,7 +70,7 @@
   },
   "howItWorks": {
     "title": "How it works",
-    "subtitle": "A simple, personalised process — expert guidance, clear pricing, and support from start to finish.",
+    "subtitle": "A simple, personalised process with expert guidance, clear pricing, and support from start to finish.",
     "step1": {
       "num": "01",
       "title": "Tell us about your situation",
@@ -128,7 +132,8 @@
     "successTitle": "Message received!",
     "successMessage": "Thank you for reaching out. We'll be in touch within 24 hours.",
     "errorMessage": "Something went wrong. Please try again or email us directly.",
-    "directEmail": "Prefer to email us directly?"
+    "directEmail": "Prefer to email us directly?",
+    "consent": "I agree to the processing of my data as described in the <link>Privacy Policy</link>."
   },
   "cta": {
     "headline": "Ready to start your immigration journey?",
@@ -142,7 +147,8 @@
       "contact": "Contact",
       "privacy": "Privacy Policy"
     },
-    "copyright": "© 2026 Avilo Immigration"
+    "copyright": "© 2026 Avilo Immigration",
+    "legal": "Avilo is a trade name of Chiltepin BV · Einde Were 274 bus 302, 9000 Ghent · BE 1007.754.576"
   },
   "swornTranslations": {
     "meta": {
@@ -153,25 +159,21 @@
       "en": "English",
       "nl": "Dutch",
       "es": "Spanish",
-      "de": "German",
       "fr": "French"
     },
     "hero": {
       "title": "Sworn translations for Belgian authorities",
       "sub": "Civil records, court judgments and notarial deeds, translated by a sworn translator registered in Belgium.",
       "ctaQuote": "Request a quote",
-      "ctaPricing": "See prices"
+      "ctaPricing": "See prices",
+      "animationDescription": "Sworn translations between Dutch, French, English, and Spanish"
     },
     "translator": {
       "title": "Your translator",
-      "body1": "Our sworn translator, Elouise Verheyen, is based in Ghent and registered in the Belgian National Register of Sworn Translators under number {vti}.",
-      "body2": "Her Dutch translations use Belgian legal terminology, not terminology from the Netherlands. This matters when a document is filed with a Belgian commune, court or the Immigration Office.",
       "registerLink": "Check her registration in the official register",
       "photoAlt": "Elouise Verheyen, sworn translator",
-      "role": "Sworn translator · {vti}"
-    },
-    "pairs": {
-      "title": "Language pairs"
+      "role": "Sworn translator · {vti}",
+      "body": "Elouise Verheyen is a sworn translator registered in Ghent. She translates between these languages, in any combination:"
     },
     "documents": {
       "title": "Documents we translate",
@@ -189,7 +191,7 @@
       },
       "administrativeDecision": {
         "title": "Administrative decisions",
-        "items": "For example, German social benefit decisions"
+        "items": "For example, social benefit decisions"
       },
       "police": {
         "title": "Police and criminal-justice documents",
@@ -234,6 +236,10 @@
         "q": "Will the authority accept the translation?",
         "a": "Translations by a sworn translator registered in Belgium are accepted by Belgian authorities. Some ask for legalization as well. Check with the receiving office, or ask us."
       },
+      "belgianDutch": {
+        "q": "Is the Dutch suitable for Belgian authorities?",
+        "a": "Yes. Translations use Belgian legal terminology, which is what communes, courts and the Immigration Office work with."
+      },
       "apostille": {
         "q": "Do I also need an apostille or legalization of the original document?",
         "a": "That depends on the country that issued it and on the authority receiving it. It is separate from the translation. We can tell you what usually applies."
@@ -244,11 +250,11 @@
       },
       "privacy": {
         "q": "What happens to my documents?",
-        "a": "Your files are used only for your translation and are deleted six months after delivery."
+        "a": "Your files are used only for your translation and are deleted six months after upload."
       },
-      "otherPairs": {
-        "q": "Can you translate other language pairs?",
-        "a": "Not at the moment. The pairs above are the ones we certify."
+      "otherLanguages": {
+        "q": "Do you translate other languages?",
+        "a": "Not at the moment. We certify translations between Dutch, French, English and Spanish."
       }
     },
     "form": {
@@ -258,8 +264,10 @@
       "email": "Email",
       "phone": "Phone",
       "optional": "optional",
-      "languagePair": "Language pair",
-      "languagePairPlaceholder": "Select a language pair",
+      "from": "From",
+      "fromPlaceholder": "Source language",
+      "to": "To",
+      "toPlaceholder": "Target language",
       "documentType": "Document type",
       "documentTypePlaceholder": "Select a document type",
       "authority": "Authority it's for",
@@ -269,7 +277,7 @@
       "filesHint": "PDF, JPG or PNG. Up to {maxFiles} files, {maxFileMb} MB per file, {maxTotalMb} MB in total.",
       "filesButton": "Choose files",
       "filesRemove": "Remove {name}",
-      "security": "Your files are sent over an encrypted connection to private storage. They are not publicly accessible, are used only for your translation and are deleted six months after delivery.",
+      "security": "Your files are sent over an encrypted connection to private storage. They are not publicly accessible, are used only for your translation and are deleted six months after upload.",
       "emailInstead": "I'll send my documents by email instead",
       "emailInsteadHint": "Send them to <mail>{email}</mail> and mention your name.",
       "message": "Message",
@@ -287,7 +295,8 @@
         "totalSize": "Your files are larger than {maxTotalMb} MB in total. Send fewer files, or send them by email.",
         "tooMany": "You can add up to {maxFiles} files.",
         "upload": "A file could not be uploaded. Please try again, or send your documents by email.",
-        "generic": "Something went wrong. Please try again, or email us at {email}."
+        "generic": "Something went wrong. Please try again, or email us at {email}.",
+        "sameLanguage": "Choose two different languages."
       }
     },
     "email": {
@@ -300,6 +309,12 @@
       "reply": "If you have any questions, reply to this email.",
       "signoff": "Kind regards,",
       "team": "Avilo Immigration"
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacy Policy | Avilo Immigration",
+      "description": "How Avilo Immigration collects, uses and protects your personal data."
     }
   }
 }

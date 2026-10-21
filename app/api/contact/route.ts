@@ -1,22 +1,9 @@
 import { Resend } from 'resend'
 import { NextResponse } from 'next/server'
+import { escapeHtml } from '@/lib/html'
 
-// Basic MX / format validation via a free API
-async function isEmailReal(email: string): Promise<boolean> {
-  try {
-    const res = await fetch(
-      `https://api.hunter.io/v2/email-verifier?email=${encodeURIComponent(email)}&api_key=${process.env.HUNTER_API_KEY}`,
-      { next: { revalidate: 0 } }
-    )
-    if (!res.ok) return true // if API fails, don't block submission
-    const data = await res.json()
-    const status = data?.data?.status
-    // block only clearly disposable / invalid
-    return status !== 'disposable' && status !== 'invalid'
-  } catch {
-    return true
-  }
-}
+// Only accept strings; trim and cap the length
+const str = (v: unknown, max: number) => (typeof v === 'string' ? v.trim().slice(0, max) : '')
 
 function buildReplyBody(
   fullName: string,
@@ -64,7 +51,7 @@ function buildEmailHtml(
   message: string
 ) {
   const replyBody = buildReplyBody(fullName, email, phone, nationality, currentResidence, destinationCountry, service, message)
-  const replySubject = encodeURIComponent(`Re: Your consultation request — Avilo Immigration`)
+  const replySubject = encodeURIComponent(`Re: Your consultation request | Avilo Immigration`)
   const mailtoHref = `mailto:${email}?subject=${replySubject}&body=${replyBody}`
 
   const row = (label: string, value: string) => `
@@ -92,18 +79,18 @@ function buildEmailHtml(
         <!-- Body -->
         <tr><td style="background-color:#ffffff;padding:36px 40px;border-radius:0 0 12px 12px;">
           <table width="100%" cellpadding="0" cellspacing="0">
-            ${row('Full Name', fullName)}
-            ${row('Email', `<a href="mailto:${email}" style="color:#2f3a7a;text-decoration:none;">${email}</a>`)}
-            ${phone ? row('Phone', phone) : ''}
-            ${row('Nationality', nationality)}
-            ${row('Current Residence → Destination', `${currentResidence} &rarr; ${destinationCountry}`)}
-            ${row('Service Needed', service)}
+            ${row('Full Name', escapeHtml(fullName))}
+            ${row('Email', `<a href="${escapeHtml(`mailto:${email}`)}" style="color:#2f3a7a;text-decoration:none;">${escapeHtml(email)}</a>`)}
+            ${phone ? row('Phone', escapeHtml(phone)) : ''}
+            ${row('Nationality', escapeHtml(nationality))}
+            ${row('Current Residence → Destination', `${escapeHtml(currentResidence)} &rarr; ${escapeHtml(destinationCountry)}`)}
+            ${row('Service Needed', escapeHtml(service))}
 
             <!-- Message -->
             <tr><td style="padding-top:20px;">
               <p style="margin:0 0 8px;font-size:11px;color:#5b5f69;text-transform:uppercase;letter-spacing:0.06em;font-family:Arial,sans-serif;">Message</p>
               <div style="background-color:#e6e8f2;border-radius:6px;padding:16px 20px;">
-                <p style="margin:0;font-size:15px;color:#14161f;line-height:1.65;font-family:Arial,sans-serif;">${message.replace(/\n/g, '<br>')}</p>
+                <p style="margin:0;font-size:15px;color:#14161f;line-height:1.65;font-family:Arial,sans-serif;">${escapeHtml(message).replace(/\n/g, '<br>')}</p>
               </div>
             </td></tr>
           </table>
@@ -111,14 +98,14 @@ function buildEmailHtml(
           <!-- Reply button -->
           <table width="100%" cellpadding="0" cellspacing="0" style="margin-top:32px;">
             <tr><td align="center">
-              <a href="${mailtoHref}"
+              <a href="${escapeHtml(mailtoHref)}"
                  style="display:inline-block;background-color:#2f3a7a;color:#ffffff;font-size:15px;font-weight:700;padding:14px 36px;border-radius:6px;text-decoration:none;font-family:Arial,sans-serif;">
-                ↩&nbsp; Reply to ${fullName.split(' ')[0]}
+                ↩&nbsp; Reply to ${escapeHtml(fullName.split(' ')[0])}
               </a>
             </td></tr>
             <tr><td align="center" style="padding-top:10px;">
               <p style="margin:0;font-size:12px;color:#5b5f69;font-family:Arial,sans-serif;">
-                Opens a pre-filled email to <strong>${email}</strong>
+                Opens a pre-filled email to <strong>${escapeHtml(email)}</strong>
               </p>
             </td></tr>
           </table>
@@ -139,8 +126,34 @@ function buildEmailHtml(
 }
 
 export async function POST(req: Request) {
-  const { fullName, email, phone, nationality, currentResidence, destinationCountry, service, message } =
-    await req.json()
+  let body: Record<string, unknown>
+  try {
+    body = await req.json()
+  } catch {
+    return NextResponse.json({ error: 'Invalid request.' }, { status: 400 })
+  }
+  if (!body || typeof body !== 'object') {
+    return NextResponse.json({ error: 'Invalid request.' }, { status: 400 })
+  }
+
+  const fullName = str(body.fullName, 200)
+  const email = str(body.email, 320)
+  const phone = str(body.phone, 40)
+  const nationality = str(body.nationality, 100)
+  const currentResidence = str(body.currentResidence, 100)
+  const destinationCountry = str(body.destinationCountry, 100)
+  const service = str(body.service, 200)
+  const message = str(body.message, 5000)
+  const consent = body.consent
+
+  if (!fullName) {
+    return NextResponse.json({ error: 'Missing name.' }, { status: 400 })
+  }
+
+  // The form requires the privacy consent checkbox; enforce it here too
+  if (consent !== true) {
+    return NextResponse.json({ error: 'Consent is required.' }, { status: 400 })
+  }
 
   // Email format check
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
@@ -148,22 +161,14 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'Invalid email address.' }, { status: 400 })
   }
 
-  // Optional real-email check (only runs if HUNTER_API_KEY is set)
-  if (process.env.HUNTER_API_KEY) {
-    const real = await isEmailReal(email)
-    if (!real) {
-      return NextResponse.json({ error: 'Please use a valid email address.' }, { status: 400 })
-    }
-  }
-
-  const html = buildEmailHtml(fullName, email, phone || '', nationality, currentResidence, destinationCountry, service, message)
+  const html = buildEmailHtml(fullName, email, phone, nationality, currentResidence, destinationCountry, service, message)
 
   const resend = new Resend(process.env.RESEND_API_KEY)
   const { error } = await resend.emails.send({
     from: 'Avilo Contact Form <form-sender@aviloimmigration.com>',
     to: process.env.CONTACT_EMAIL!,
     replyTo: email,
-    subject: `New consultation request from ${fullName}`,
+    subject: `New consultation request from ${fullName.replace(/[\r\n]+/g, ' ')}`,
     html,
   })
 

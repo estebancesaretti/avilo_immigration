@@ -5,9 +5,7 @@ import Hero from '@/components/sections/Hero'
 import Services from '@/components/sections/Services'
 import WhereWeOperate from '@/components/sections/WhereWeOperate'
 import HowItWorks from '@/components/sections/HowItWorks'
-import Testimonials from '@/components/sections/Testimonials'
 import Contact from '@/components/sections/Contact'
-import CTABanner from '@/components/sections/CTABanner'
 import { routing } from '@/i18n/routing'
 
 type Props = {

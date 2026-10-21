@@ -4,10 +4,10 @@ import { Globe } from 'lucide-react'
 import Container from '@/components/Container'
 
 const countries = [
-  { key: 'be', flagUrl: 'https://flagcdn.com/w80/be.png' },
-  { key: 'nl', flagUrl: 'https://flagcdn.com/w80/nl.png' },
-  { key: 'lu', flagUrl: 'https://flagcdn.com/w80/lu.png' },
-  { key: 'fr', flagUrl: 'https://flagcdn.com/w80/fr.png' },
+  { key: 'be', flagUrl: '/flags/be.svg' },
+  { key: 'nl', flagUrl: '/flags/nl.svg' },
+  { key: 'lu', flagUrl: '/flags/lu.svg' },
+  { key: 'fr', flagUrl: '/flags/fr.svg' },
 ] as const
 
 export default function WhereWeOperate() {

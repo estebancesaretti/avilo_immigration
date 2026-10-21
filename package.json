@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@vercel/blob": "^2.8.2",
+    "d3-geo": "^3.1.1",
     "lucide-react": "^1.8.0",
     "next": "16.2.4",
     "next-intl": "^4.9.1",
@@ -17,13 +18,17 @@
     "react-dom": "19.2.4",
     "react-international-phone": "^4.8.0",
     "react-select": "^5.10.2",
-    "resend": "^6.24.0"
+    "resend": "^6.24.0",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/d3-geo": "^3.1.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/topojson-client": "^3.1.5",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
     "tailwindcss": "^4",

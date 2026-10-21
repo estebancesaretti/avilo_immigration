@@ -36,7 +36,7 @@ export function languageAlternates(path: string = '/') {
 export async function localizedMetadata(
   locale: string,
   path: string = '/',
-  namespace: 'metadata' | 'swornTranslations.meta' = 'metadata',
+  namespace: 'metadata' | 'swornTranslations.meta' | 'privacy.meta' = 'metadata',
 ): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace })
   const url = `${SITE_URL}${localizedPath(locale, path)}`

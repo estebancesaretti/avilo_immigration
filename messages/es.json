@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Avilo Immigration — Asesoría experta, precios claros y acompañamiento de principio a fin.",
+    "title": "Avilo Immigration | Asesoría experta, precios claros y acompañamiento de principio a fin.",
     "description": "Avilo ayuda a personas y familias con su proceso migratorio en Bélgica, los Países Bajos, Luxemburgo y Francia, con experiencia, claridad y cercanía.",
     "shareDescription": "Asesoría migratoria experta en Bélgica, los Países Bajos, Luxemburgo y Francia."
   },
@@ -16,7 +16,11 @@
     "headline": "Expertos en inmigración en el Benelux y Francia.",
     "subheadline": "Permisos de residencia, de trabajo y de reagrupación familiar, gestionados de principio a fin.",
     "ctaPrimary": "Consulta gratuita",
-    "ctaSecondary": "Nuestros servicios"
+    "ctaSecondary": "Nuestros servicios",
+    "globe": {
+      "yourLocation": "Tu ubicación",
+      "srDescription": "Acompañamos a personas de todo el mundo hacia Bélgica, los Países Bajos, Luxemburgo y Francia."
+    }
   },
   "services": {
     "title": "Cómo podemos ayudarte",
@@ -85,7 +89,8 @@
       "contact": "Contacto",
       "privacy": "Política de privacidad"
     },
-    "copyright": "© 2025 Avilo Immigration"
+    "copyright": "© 2025 Avilo Immigration",
+    "legal": "Avilo es un nombre comercial de Chiltepin BV · Einde Were 274 bus 302, 9000 Gante · BE 1007.754.576"
   },
   "swornTranslations": {
     "meta": {
@@ -96,25 +101,21 @@
       "en": "Inglés",
       "nl": "Neerlandés",
       "es": "Español",
-      "de": "Alemán",
       "fr": "Francés"
     },
     "hero": {
       "title": "Traducciones juradas para las autoridades belgas",
       "sub": "Documentos del registro civil, sentencias judiciales y escrituras notariales, traducidos por una traductora jurada inscrita en Bélgica.",
       "ctaQuote": "Pedir presupuesto",
-      "ctaPricing": "Ver precios"
+      "ctaPricing": "Ver precios",
+      "animationDescription": "Traducciones juradas entre neerlandés, francés, inglés y español"
     },
     "translator": {
       "title": "Tu traductora",
-      "body1": "Nuestra traductora jurada, Elouise Verheyen, trabaja desde Gante y está inscrita en el Registro Nacional belga de traductores jurados con el número {vti}.",
-      "body2": "Sus traducciones al neerlandés usan la terminología jurídica belga, no la de los Países Bajos. Esto es importante cuando un documento se presenta ante un ayuntamiento, un tribunal o la Oficina de Extranjería en Bélgica.",
       "registerLink": "Comprueba su inscripción en el registro oficial",
       "photoAlt": "Elouise Verheyen, traductora jurada",
-      "role": "Traductora jurada · {vti}"
-    },
-    "pairs": {
-      "title": "Combinaciones de idiomas"
+      "role": "Traductora jurada · {vti}",
+      "body": "Elouise Verheyen es traductora jurada registrada en Gante. Traduce entre estos idiomas, en cualquier combinación:"
     },
     "documents": {
       "title": "Documentos que traducimos",
@@ -132,7 +133,7 @@
       },
       "administrativeDecision": {
         "title": "Resoluciones administrativas",
-        "items": "Por ejemplo, resoluciones alemanas sobre prestaciones sociales"
+        "items": "Por ejemplo, resoluciones sobre prestaciones sociales"
       },
       "police": {
         "title": "Documentos policiales y penales",
@@ -177,6 +178,10 @@
         "q": "¿Aceptará la autoridad la traducción?",
         "a": "Las autoridades belgas aceptan las traducciones de un traductor jurado inscrito en Bélgica. Algunas piden además una legalización. Consúltalo con la oficina receptora o pregúntanos."
       },
+      "belgianDutch": {
+        "q": "¿El neerlandés es adecuado para las autoridades belgas?",
+        "a": "Sí. Las traducciones usan la terminología jurídica belga, la que utilizan los ayuntamientos, los tribunales y la Oficina de Extranjería."
+      },
       "apostille": {
         "q": "¿Necesito también una apostilla o la legalización del documento original?",
         "a": "Depende del país que lo expidió y de la autoridad que lo recibe. Es independiente de la traducción. Podemos decirte lo que suele aplicarse."
@@ -187,11 +192,11 @@
       },
       "privacy": {
         "q": "¿Qué pasa con mis documentos?",
-        "a": "Tus archivos se usan solo para tu traducción y se eliminan seis meses después de la entrega."
+        "a": "Tus archivos se usan solo para tu traducción y se eliminan seis meses después de subirlos."
       },
-      "otherPairs": {
-        "q": "¿Hay otras combinaciones de idiomas?",
-        "a": "Por ahora no. Las combinaciones de arriba son las que certificamos."
+      "otherLanguages": {
+        "q": "¿Traducen otros idiomas?",
+        "a": "Por ahora no. Certificamos traducciones entre neerlandés, francés, inglés y español."
       }
     },
     "form": {
@@ -201,8 +206,10 @@
       "email": "Correo electrónico",
       "phone": "Teléfono",
       "optional": "opcional",
-      "languagePair": "Combinación de idiomas",
-      "languagePairPlaceholder": "Elige una combinación",
+      "from": "De",
+      "fromPlaceholder": "Idioma de origen",
+      "to": "A",
+      "toPlaceholder": "Idioma de destino",
       "documentType": "Tipo de documento",
       "documentTypePlaceholder": "Elige un tipo de documento",
       "authority": "Autoridad a la que va dirigido",
@@ -212,7 +219,7 @@
       "filesHint": "PDF, JPG o PNG. Hasta {maxFiles} archivos, {maxFileMb} MB por archivo y {maxTotalMb} MB en total.",
       "filesButton": "Elegir archivos",
       "filesRemove": "Quitar {name}",
-      "security": "Tus archivos se envían por una conexión cifrada a un almacenamiento privado. No son accesibles públicamente, se usan solo para tu traducción y se eliminan seis meses después de la entrega.",
+      "security": "Tus archivos se envían por una conexión cifrada a un almacenamiento privado. No son accesibles públicamente, se usan solo para tu traducción y se eliminan seis meses después de subirlos.",
       "emailInstead": "Prefiero enviar mis documentos por correo electrónico",
       "emailInsteadHint": "Envíalos a <mail>{email}</mail> e indica tu nombre.",
       "message": "Mensaje",
@@ -230,7 +237,8 @@
         "totalSize": "Tus archivos superan los {maxTotalMb} MB en total. Envía menos archivos o mándalos por correo electrónico.",
         "tooMany": "Puedes añadir hasta {maxFiles} archivos.",
         "upload": "No se pudo subir un archivo. Inténtalo de nuevo o envía tus documentos por correo electrónico.",
-        "generic": "Algo salió mal. Inténtalo de nuevo o escríbenos a {email}."
+        "generic": "Algo salió mal. Inténtalo de nuevo o escríbenos a {email}.",
+        "sameLanguage": "Elige dos idiomas distintos."
       }
     },
     "email": {
@@ -243,6 +251,12 @@
       "reply": "Si tienes alguna pregunta, responde a este correo.",
       "signoff": "Un saludo,",
       "team": "Avilo Immigration"
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Política de privacidad | Avilo Immigration",
+      "description": "Cómo Avilo Immigration recopila, utiliza y protege tus datos personales."
     }
   }
 }

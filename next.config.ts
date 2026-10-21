@@ -10,11 +10,16 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
-      {
-        protocol: 'https',
-        hostname: 'flagcdn.com',
-      },
     ],
+  },
+  async headers() {
+    return [
+      {
+        // Flags never change; if one ever does, give the file a new name
+        source: '/flags/:file*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+    ]
   },
 }
 

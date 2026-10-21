@@ -11,7 +11,7 @@ import { inputStyle, labelStyle, phoneInputProps, selectStyles } from '@/compone
 import {
   DOCUMENT_TYPES,
   EMAIL_RE,
-  LANGUAGE_DIRECTIONS,
+  LANGUAGES,
   TRANSLATIONS_EMAIL,
   UPLOAD,
   UPLOAD_PREFIX,
@@ -19,11 +19,10 @@ import {
   safeFileName,
   uploadMonth,
   type DocumentType,
-  type LanguageDirection,
+  type LanguageCode,
 } from '@/lib/sworn-translations'
 
 type Status = 'idle' | 'uploading' | 'sending' | 'done'
-type Lang = 'en' | 'nl' | 'es' | 'de' | 'fr'
 
 const MB = 1024 * 1024
 const LIMITS = {
@@ -36,7 +35,8 @@ const initial = {
   name: '',
   email: '',
   phone: '',
-  direction: '' as LanguageDirection | '',
+  from: '' as LanguageCode | '',
+  to: '' as LanguageCode | '',
   documentType: '' as DocumentType | '',
   authority: '',
   deadline: '',
@@ -62,10 +62,7 @@ export default function QuoteForm() {
   const busy = status === 'uploading' || status === 'sending'
   const today = new Date().toISOString().slice(0, 10)
 
-  const directionOptions = LANGUAGE_DIRECTIONS.map((d) => {
-    const [from, to] = d.split('-') as [Lang, Lang]
-    return { value: d, label: `${t(`languages.${from}`)} → ${t(`languages.${to}`)}` }
-  })
+  const languageOptions = LANGUAGES.map((code) => ({ value: code, label: t(`languages.${code}`) }))
   const documentOptions = DOCUMENT_TYPES.map((d) => ({ value: d, label: t(`documents.${d}.title`) }))
 
   function set<K extends keyof typeof initial>(key: K, value: (typeof initial)[K]) {
@@ -104,6 +101,7 @@ export default function QuoteForm() {
     setError('')
 
     if (!EMAIL_RE.test(form.email)) return setError(t('form.errors.invalidEmail'))
+    if (form.from && form.from === form.to) return setError(t('form.errors.sameLanguage'))
     if (files.length === 0 && !form.byEmail) return setError(t('form.errors.filesRequired'))
 
     const requestId = crypto.randomUUID()
@@ -174,36 +172,40 @@ export default function QuoteForm() {
         </div>
       </div>
 
-      {/* Language pair + Document type */}
+      {/* From + To */}
       <div className="flex flex-col md:flex-row gap-4">
-        <div style={{ flex: 1 }}>
-          <label htmlFor="quote-direction" style={labelStyle}>{t('form.languagePair')}</label>
-          <Select
-            instanceId="quote-direction"
-            inputId="quote-direction"
-            options={directionOptions}
-            placeholder={t('form.languagePairPlaceholder')}
-            value={directionOptions.find((o) => o.value === form.direction) ?? null}
-            onChange={(opt) => set('direction', opt?.value ?? '')}
-            isSearchable={false}
-            styles={selectStyles}
-            required
-          />
-        </div>
-        <div style={{ flex: 1 }}>
-          <label htmlFor="quote-document" style={labelStyle}>{t('form.documentType')}</label>
-          <Select
-            instanceId="quote-document"
-            inputId="quote-document"
-            options={documentOptions}
-            placeholder={t('form.documentTypePlaceholder')}
-            value={documentOptions.find((o) => o.value === form.documentType) ?? null}
-            onChange={(opt) => set('documentType', opt?.value ?? '')}
-            isSearchable={false}
-            styles={selectStyles}
-            required
-          />
-        </div>
+        {(['from', 'to'] as const).map((key) => (
+          <div key={key} style={{ flex: 1 }}>
+            <label htmlFor={`quote-${key}`} style={labelStyle}>{t(`form.${key}`)}</label>
+            <Select
+              instanceId={`quote-${key}`}
+              inputId={`quote-${key}`}
+              options={languageOptions}
+              placeholder={t(`form.${key}Placeholder`)}
+              value={languageOptions.find((o) => o.value === form[key]) ?? null}
+              onChange={(opt) => set(key, opt?.value ?? '')}
+              isSearchable={false}
+              styles={selectStyles}
+              required
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* Document type */}
+      <div>
+        <label htmlFor="quote-document" style={labelStyle}>{t('form.documentType')}</label>
+        <Select
+          instanceId="quote-document"
+          inputId="quote-document"
+          options={documentOptions}
+          placeholder={t('form.documentTypePlaceholder')}
+          value={documentOptions.find((o) => o.value === form.documentType) ?? null}
+          onChange={(opt) => set('documentType', opt?.value ?? '')}
+          isSearchable={false}
+          styles={selectStyles}
+          required
+        />
       </div>
 
       {/* Authority + Deadline */}

@@ -4,17 +4,18 @@ import { getTranslations } from 'next-intl/server'
 import { Resend } from 'resend'
 import { routing } from '@/i18n/routing'
 import { escapeHtml } from '@/lib/html'
+import { clientIp, rateLimit } from '@/lib/rate-limit'
 import {
   DOCUMENT_TYPES,
   EMAIL_RE,
-  LANGUAGE_DIRECTIONS,
+  LANGUAGES,
   TRANSLATIONS_EMAIL,
   UPLOAD,
   UPLOAD_PATH_RE,
   UPLOAD_PREFIX,
   formatFileSize,
   type DocumentType,
-  type LanguageDirection,
+  type LanguageCode,
 } from '@/lib/sworn-translations'
 
 type Attachment = { filename: string; content: Buffer; contentType: string }
@@ -27,7 +28,8 @@ type QuoteRequest = {
   name: string
   email: string
   phone: string
-  direction: LanguageDirection
+  from: LanguageCode
+  to: LanguageCode
   documentType: DocumentType
   authority: string
   deadline: string
@@ -48,7 +50,8 @@ function parse(body: Record<string, unknown>): QuoteRequest | string {
     email: str(body.email, 320),
     // the phone widget sends just the country code when left empty
     phone: str(body.phone, 40).replace(/^\+\d{1,4}$/, ''),
-    direction: body.direction as LanguageDirection,
+    from: body.from as LanguageCode,
+    to: body.to as LanguageCode,
     documentType: body.documentType as DocumentType,
     authority: str(body.authority, 300),
     deadline: /^\d{4}-\d{2}-\d{2}$/.test(str(body.deadline)) ? str(body.deadline) : '',
@@ -60,7 +63,8 @@ function parse(body: Record<string, unknown>): QuoteRequest | string {
 
   if (!req.name) return 'Missing name.'
   if (!EMAIL_RE.test(req.email)) return 'Invalid email address.'
-  if (!LANGUAGE_DIRECTIONS.includes(req.direction)) return 'Invalid language pair.'
+  if (!LANGUAGES.includes(req.from) || !LANGUAGES.includes(req.to)) return 'Invalid language.'
+  if (req.from === req.to) return 'Choose two different languages.'
   if (!DOCUMENT_TYPES.includes(req.documentType)) return 'Invalid document type.'
   if (!req.consent) return 'Consent is required.'
   if (req.files.length > UPLOAD.maxFiles) return 'Too many files.'
@@ -97,7 +101,7 @@ function renderEmail(heading: string, intro: string[], rows: [string, string][],
     .map(([label, value]) => `
       <tr><td style="padding:12px 0;border-bottom:1px solid #e3e2dd;">
         <p style="margin:0;font-size:11px;color:#5b5f69;text-transform:uppercase;letter-spacing:0.06em;font-family:Arial,sans-serif;">${escapeHtml(label)}</p>
-        <p style="margin:4px 0 0;font-size:15px;color:#14161f;font-weight:600;font-family:Arial,sans-serif;white-space:pre-wrap;">${escapeHtml(value) || '—'}</p>
+        <p style="margin:4px 0 0;font-size:15px;color:#14161f;font-weight:600;font-family:Arial,sans-serif;white-space:pre-wrap;">${escapeHtml(value) || 'Not provided'}</p>
       </td></tr>`)
     .join('')
   const introHtml = intro
@@ -124,6 +128,10 @@ function renderEmail(heading: string, intro: string[], rows: [string, string][],
 }
 
 export async function POST(req: Request) {
+  if (!rateLimit('quote', clientIp(req), 5, 10 * 60 * 1000)) {
+    return NextResponse.json({ error: 'Too many requests. Please try again later.' }, { status: 429 })
+  }
+
   let body: Record<string, unknown>
   try {
     body = await req.json()
@@ -152,8 +160,7 @@ export async function POST(req: Request) {
   const en = await getTranslations({ locale: 'en', namespace: 'swornTranslations' })
   const t = await getTranslations({ locale: data.locale, namespace: 'swornTranslations' })
   const pair = (tr: typeof t) => {
-    const [from, to] = data.direction.split('-') as ['en' | 'nl' | 'es' | 'de' | 'fr', 'en' | 'nl' | 'es' | 'de' | 'fr']
-    return `${tr(`languages.${from}`)} → ${tr(`languages.${to}`)}`
+    return `${tr(`languages.${data.from}`)} → ${tr(`languages.${data.to}`)}`
   }
   const recipient = process.env.TRANSLATIONS_EMAIL || TRANSLATIONS_EMAIL
   const fileList = attachments.map((a) => `${a.filename} (${formatFileSize(a.content.byteLength)})`).join('\n')
@@ -171,7 +178,7 @@ export async function POST(req: Request) {
         [en('form.name'), data.name],
         [en('form.email'), data.email],
         [en('form.phone'), data.phone],
-        [en('form.languagePair'), pair(en)],
+        [`${en('form.from')} → ${en('form.to')}`, pair(en)],
         [en('form.documentType'), en(`documents.${data.documentType}.title`)],
         [en('form.authority'), data.authority],
         [en('form.deadline'), data.deadline],
@@ -181,7 +188,7 @@ export async function POST(req: Request) {
       ],
       `Request ID: ${data.requestId}\n` +
         (attachments.length
-          ? `Files attached (${formatFileSize(totalBytes)} total). Stored privately under ${UPLOAD_PREFIX}/…/${data.requestId}/ and to be deleted six months after delivery.`
+          ? `Files attached (${formatFileSize(totalBytes)} total). Stored privately under ${UPLOAD_PREFIX}/…/${data.requestId}/ and to be deleted six months after upload. Delete this email's attachments by then too.`
           : 'No files attached.'),
     ),
     attachments,
@@ -201,7 +208,7 @@ export async function POST(req: Request) {
       t('email.subject'),
       [t('email.greeting', { name: data.name.split(' ')[0] }), t('email.body')],
       [
-        [t('form.languagePair'), pair(t)],
+        [`${t('form.from')} → ${t('form.to')}`, pair(t)],
         [t('form.documentType'), t(`documents.${data.documentType}.title`)],
         [t('form.files'), attachments.length ? t('email.filesCount', { count: attachments.length }) : t('email.byEmail', { email: TRANSLATIONS_EMAIL })],
       ],

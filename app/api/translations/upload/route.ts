@@ -1,10 +1,15 @@
 import { handleUpload, type HandleUploadBody } from '@vercel/blob/client'
 import { NextResponse } from 'next/server'
+import { clientIp, rateLimit } from '@/lib/rate-limit'
 import { UPLOAD, UPLOAD_PATH_RE, uploadMonth } from '@/lib/sworn-translations'
 
 // Issues short-lived tokens so the browser can upload straight to the private
 // Blob store (bypassing Vercel's ~4.5 MB request body limit).
 export async function POST(request: Request) {
+  if (!rateLimit('upload', clientIp(request), 30, 10 * 60 * 1000)) {
+    return NextResponse.json({ error: 'Too many uploads. Please try again later.' }, { status: 429 })
+  }
+
   const body = (await request.json()) as HandleUploadBody
 
   try {
