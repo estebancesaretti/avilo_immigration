@@ -12,7 +12,6 @@
     "swornTranslations": "Sworn translations"
   },
   "hero": {
-    "eyebrow": "Immigration specialists in Europe",
     "headline": "Immigration experts in the Benelux and France.",
     "subheadline": "Residence, work, and family permits, handled from start to finish.",
     "ctaPrimary": "Tell us your situation",
@@ -206,7 +205,8 @@
       "title": "What makes it a sworn translation",
       "fidelity": "Full fidelity: nothing is added, left out or corrected. Stamps, seals, signatures and QR codes are described in brackets where they appear.",
       "certification": "Every page carries \"Voor eensluidende vertaling\". The last page has the certification clause, signature and VTI number.",
-      "delivery": "Delivered as a PDF with a qualified electronic signature, plus a hand-signed copy if necessary."
+      "delivery": "Delivered as a PDF with a qualified electronic signature, plus a hand-signed copy if necessary.",
+      "animationDescription": "Sworn translations between Dutch, French, English, and Spanish"
     },
     "steps": {
       "title": "How it works",

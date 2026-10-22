@@ -18,26 +18,7 @@ export default function Hero() {
         className="flex flex-col md:grid md:grid-cols-2 md:items-center gap-8"
       >
         {/* Text side */}
-        <div className="md:order-1 text-left" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-
-          <span
-            style={{
-              display: 'inline-block',
-              backgroundColor: 'var(--color-tint)',
-              color: 'var(--color-primary)',
-              fontFamily: 'var(--font-body)',
-              fontWeight: 600,
-              fontSize: '0.8125rem',
-              letterSpacing: '0.05em',
-              textTransform: 'uppercase',
-              padding: '0.375rem 0.875rem',
-              borderRadius: 'var(--radius-badge)',
-              width: 'fit-content',
-            }}
-          >
-            {t('eyebrow')}
-          </span>
-
+        <div className="md:order-1 text-left" style={{ display: 'flex', flexDirection: 'column' }}>
           <h1
             style={{
               fontFamily: 'var(--font-heading)',
@@ -57,14 +38,15 @@ export default function Hero() {
               fontSize: '1.0625rem',
               lineHeight: 1.7,
               color: 'var(--color-muted)',
-              margin: 0,
-              maxWidth: '480px',
+              margin: '1.5rem 0 0',
+              maxWidth: '36ch',
+              textWrap: 'balance',
             }}
           >
             {t('subheadline')}
           </p>
 
-          <div>
+          <div style={{ marginTop: '2.5rem' }}>
             <Link
               href="#contact"
               className="btn-primary"

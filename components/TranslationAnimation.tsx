@@ -53,7 +53,7 @@ function randomPair(doc: number): Pair {
 const FIRST: Pair = { source: 'es', target: 'nl', doc: 0 }
 
 export default function TranslationAnimation() {
-  const t = useTranslations('swornTranslations.hero')
+  const t = useTranslations('swornTranslations.sworn')
   const rootRef = useRef<HTMLDivElement>(null)
   const titleRef = useRef<SVGTextElement>(null)
   const badgeRef = useRef<SVGGElement>(null)

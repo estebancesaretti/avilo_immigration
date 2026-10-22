@@ -12,7 +12,6 @@
     "swornTranslations": "Traductions jurées"
   },
   "hero": {
-    "eyebrow": "Spécialistes en immigration en Europe",
     "headline": "Experts en immigration au Benelux et en France.",
     "subheadline": "Titres de séjour, permis de travail et regroupement familial, gérés du début à la fin.",
     "ctaPrimary": "Consultation gratuite",
@@ -152,7 +151,8 @@
       "title": "Ce qui fait une traduction jurée",
       "fidelity": "Fidélité totale : rien n'est ajouté, omis ni corrigé. Les cachets, sceaux, signatures et codes QR sont décrits entre crochets là où ils apparaissent.",
       "certification": "Chaque page porte la mention « Voor eensluidende vertaling ». La dernière page comporte la formule de certification, la signature et le numéro VTI.",
-      "delivery": "Livrée en PDF avec une signature électronique qualifiée, ainsi qu'un exemplaire signé à la main si nécessaire."
+      "delivery": "Livrée en PDF avec une signature électronique qualifiée, ainsi qu'un exemplaire signé à la main si nécessaire.",
+      "animationDescription": "Traductions jurées entre le néerlandais, le français, l'anglais et l'espagnol"
     },
     "steps": {
       "title": "Comment ça marche",

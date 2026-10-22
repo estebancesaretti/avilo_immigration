@@ -8,6 +8,7 @@ import Footer from '@/components/Footer'
 import Container from '@/components/Container'
 import Accordion from '@/components/Accordion'
 import QuoteForm from '@/components/sworn-translations/QuoteForm'
+import TranslationAnimation from '@/components/TranslationAnimation'
 import { ArrowRight, ArrowUpRight, BadgeCheck, Clock, Gavel, Landmark, ScrollText, ShieldCheck, Stamp } from 'lucide-react'
 import { LANGUAGES, REGISTER_URL, VTI_NUMBER } from '@/lib/sworn-translations'
 
@@ -241,20 +242,26 @@ export default async function SwornTranslationsPage({ params }: Props) {
         <section style={{ backgroundColor: 'var(--color-bg)', padding: '5rem 0' }}>
           <Container>
             <h2 style={h2Style}>{t('sworn.title')}</h2>
-            <ul className="grid grid-cols-1 md:grid-cols-3 gap-5" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              {SWORN_POINTS.map((key) => (
-                <li key={key} style={{
-                  display: 'flex', gap: '0.875rem', alignItems: 'flex-start',
-                  backgroundColor: 'var(--color-white)',
-                  border: '1px solid var(--color-border)',
-                  borderRadius: 'var(--radius-card)',
-                  padding: '1.5rem',
-                }}>
-                  <BadgeCheck size={22} color="var(--color-primary)" aria-hidden="true" style={{ flexShrink: 0, marginTop: '0.125rem' }} />
-                  <p style={{ ...bodyStyle, fontSize: '0.9375rem', lineHeight: 1.65, color: 'var(--color-ink)' }}>{t(`sworn.${key}`)}</p>
-                </li>
-              ))}
-            </ul>
+            {/* Points stacked beside the document animation; animation left on desktop (mirrors the hero), below the points on mobile */}
+            <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] md:items-center gap-10 md:gap-12">
+              <ul className="flex flex-col gap-5" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                {SWORN_POINTS.map((key) => (
+                  <li key={key} style={{
+                    display: 'flex', gap: '0.875rem', alignItems: 'flex-start',
+                    backgroundColor: 'var(--color-white)',
+                    border: '1px solid var(--color-border)',
+                    borderRadius: 'var(--radius-card)',
+                    padding: '1.5rem',
+                  }}>
+                    <BadgeCheck size={22} color="var(--color-primary)" aria-hidden="true" style={{ flexShrink: 0, marginTop: '0.125rem' }} />
+                    <p style={{ ...bodyStyle, fontSize: '0.9375rem', lineHeight: 1.65, color: 'var(--color-ink)' }}>{t(`sworn.${key}`)}</p>
+                  </li>
+                ))}
+              </ul>
+              <div className="md:order-first max-w-[220px] md:max-w-none w-full mx-auto">
+                <TranslationAnimation />
+              </div>
+            </div>
           </Container>
         </section>
 

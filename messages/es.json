@@ -12,7 +12,6 @@
     "swornTranslations": "Traducciones juradas"
   },
   "hero": {
-    "eyebrow": "Especialistas en inmigración en Europa",
     "headline": "Expertos en inmigración en el Benelux y Francia.",
     "subheadline": "Permisos de residencia, de trabajo y de reagrupación familiar, gestionados de principio a fin.",
     "ctaPrimary": "Consulta gratuita",
@@ -152,7 +151,8 @@
       "title": "Qué hace que una traducción sea jurada",
       "fidelity": "Fidelidad total: no se añade, omite ni corrige nada. Los sellos, timbres, firmas y códigos QR se describen entre corchetes donde aparecen.",
       "certification": "Cada página lleva la mención «Voor eensluidende vertaling». La última página incluye la fórmula de certificación, la firma y el número VTI.",
-      "delivery": "Se entrega en PDF con firma electrónica cualificada y, si es necesario, una copia firmada a mano."
+      "delivery": "Se entrega en PDF con firma electrónica cualificada y, si es necesario, una copia firmada a mano.",
+      "animationDescription": "Traducciones juradas entre neerlandés, francés, inglés y español"
     },
     "steps": {
       "title": "Cómo funciona",

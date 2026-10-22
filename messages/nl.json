@@ -12,7 +12,6 @@
     "swornTranslations": "Beëdigde vertalingen"
   },
   "hero": {
-    "eyebrow": "Immigratiespecialisten in Europa",
     "headline": "Immigratie-experts in de Benelux en Frankrijk.",
     "subheadline": "Verblijfs-, werk- en gezinsvergunningen, van begin tot eind geregeld.",
     "ctaPrimary": "Gratis consultatie",
@@ -152,7 +151,8 @@
       "title": "Wat maakt een vertaling beëdigd",
       "fidelity": "Volledige getrouwheid: er wordt niets toegevoegd, weggelaten of verbeterd. Stempels, zegels, handtekeningen en QR-codes worden tussen haakjes beschreven waar ze voorkomen.",
       "certification": "Elke pagina draagt de vermelding \"Voor eensluidende vertaling\". De laatste pagina bevat de certificeringsformule, de handtekening en het VTI-nummer.",
-      "delivery": "Geleverd als pdf met een gekwalificeerde elektronische handtekening, plus een exemplaar met handgeschreven handtekening indien nodig."
+      "delivery": "Geleverd als pdf met een gekwalificeerde elektronische handtekening, plus een exemplaar met handgeschreven handtekening indien nodig.",
+      "animationDescription": "Beëdigde vertalingen tussen het Nederlands, Frans, Engels en Spaans"
     },
     "steps": {
       "title": "Zo werkt het",
