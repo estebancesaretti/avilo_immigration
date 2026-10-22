@@ -2,20 +2,22 @@
 
 import { useTranslations } from 'next-intl'
 import { useState } from 'react'
-import { Briefcase, Users, GraduationCap, Shield, FileCheck, Building2, BookOpen, Scale, ChevronDown, MessageCircle } from 'lucide-react'
+import { Briefcase, Users, GraduationCap, Shield, Languages, Building2, BookOpen, Scale, ChevronDown, MessageCircle, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
+import { Link as IntlLink } from '@/i18n/navigation'
 import Container from '@/components/Container'
 
-const CARDS = [
+// A card with `href` links to its own page; its `linkKey` labels the link.
+const CARDS: { icon: typeof Briefcase; titleKey: string; descKey: string; href?: string; linkKey?: string }[] = [
   { icon: Briefcase,     titleKey: 'card1.title', descKey: 'card1.description' },
   { icon: Users,         titleKey: 'card2.title', descKey: 'card2.description' },
   { icon: GraduationCap, titleKey: 'card3.title', descKey: 'card3.description' },
   { icon: Shield,        titleKey: 'card4.title', descKey: 'card4.description' },
-  { icon: FileCheck,     titleKey: 'card5.title', descKey: 'card5.description' },
+  { icon: Languages,     titleKey: 'card5.title', descKey: 'card5.description', href: '/sworn-translations', linkKey: 'card5.link' },
   { icon: Building2,     titleKey: 'card6.title', descKey: 'card6.description' },
   { icon: BookOpen,      titleKey: 'card7.title', descKey: 'card7.description' },
   { icon: Scale,         titleKey: 'card8.title', descKey: 'card8.description' },
-] as const
+]
 
 export default function Services() {
   const t = useTranslations('services')
@@ -48,9 +50,12 @@ export default function Services() {
 
         {/* ── Desktop grid ── */}
         <div className="hidden md:grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.25rem' }}>
-          {CARDS.map(({ icon: Icon, titleKey, descKey }) => (
-            <div
+          {CARDS.map(({ icon: Icon, titleKey, descKey, href, linkKey }) => {
+            const Card = href ? IntlLink : 'div'
+            return (
+            <Card
               key={titleKey}
+              href={href as string}
               style={{
                 backgroundColor: 'var(--color-tint)',
                 borderRadius: 'var(--radius-card)',
@@ -59,7 +64,8 @@ export default function Services() {
                 flexDirection: 'column',
                 gap: '0.875rem',
                 transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-                cursor: 'default',
+                cursor: href ? 'pointer' : 'default',
+                textDecoration: 'none',
               }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget
@@ -95,13 +101,25 @@ export default function Services() {
               }}>
                 {t(descKey)}
               </p>
-            </div>
-          ))}
+              {linkKey && (
+                <span style={{
+                  marginTop: 'auto',
+                  display: 'inline-flex', alignItems: 'center', gap: '0.375rem',
+                  fontFamily: 'var(--font-body)', fontSize: '0.875rem', fontWeight: 600,
+                  color: 'var(--color-primary)',
+                }}>
+                  {t(linkKey)}
+                  <ArrowRight size={15} aria-hidden="true" />
+                </span>
+              )}
+            </Card>
+            )
+          })}
         </div>
 
         {/* ── Mobile accordion ── */}
         <div className="flex flex-col md:hidden" style={{ gap: '0.875rem' }}>
-          {CARDS.map(({ icon: Icon, titleKey, descKey }, i) => {
+          {CARDS.map(({ icon: Icon, titleKey, descKey, href, linkKey }, i) => {
             const isOpen = openIndex === i
             return (
               <div
@@ -169,6 +187,20 @@ export default function Services() {
                   }}>
                     {t(descKey)}
                   </p>
+                  {href && linkKey && (
+                    <IntlLink
+                      href={href}
+                      style={{
+                        display: 'inline-flex', alignItems: 'center', gap: '0.375rem',
+                        margin: '0 1.25rem 1.25rem',
+                        fontFamily: 'var(--font-body)', fontSize: '0.9375rem', fontWeight: 600,
+                        color: 'var(--color-primary)', textDecoration: 'none',
+                      }}
+                    >
+                      {t(linkKey)}
+                      <ArrowRight size={15} aria-hidden="true" />
+                    </IntlLink>
+                  )}
                 </div>
               </div>
             )

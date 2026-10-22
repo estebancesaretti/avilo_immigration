@@ -42,8 +42,9 @@
       "description": "Clear guidance through the asylum procedure, from your first application to the final decision."
     },
     "card5": {
-      "title": "Document legalisation",
-      "description": "Apostilles, sworn translations, and legalisation of official documents for immigration procedures."
+      "title": "Sworn translations",
+      "description": "Certified translations of civil records, court judgments and notarial deeds, in Dutch, French, English and Spanish.",
+      "link": "See sworn translations"
     },
     "card6": {
       "title": "Work permits",
@@ -152,8 +153,8 @@
   },
   "swornTranslations": {
     "meta": {
-      "title": "Sworn translations in Belgium | Avilo",
-      "description": "Sworn translations of civil records, court judgments and notarial deeds for Belgian authorities, by a sworn translator registered in Belgium."
+      "title": "Sworn translations | Avilo",
+      "description": "Sworn translations of civil records, court judgments and notarial deeds between Dutch, French, English and Spanish, by a sworn translator registered in Belgium."
     },
     "languages": {
       "en": "English",
@@ -162,18 +163,17 @@
       "fr": "French"
     },
     "hero": {
-      "title": "Sworn translations for Belgian authorities",
-      "sub": "Civil records, court judgments and notarial deeds, translated by a sworn translator registered in Belgium.",
+      "title": "Sworn translations for official documents",
+      "sub": "Civil records, court judgments and notarial deeds, certified and ready to file.",
       "ctaQuote": "Request a quote",
       "ctaPricing": "See prices",
-      "animationDescription": "Sworn translations between Dutch, French, English, and Spanish"
+      "facts": "From €90 · 2–3 business days · Signed PDF"
     },
     "translator": {
-      "title": "Your translator",
-      "registerLink": "Check her registration in the official register",
-      "photoAlt": "Elouise Verheyen, sworn translator",
-      "role": "Sworn translator · {vti}",
-      "body": "Elouise Verheyen is a sworn translator registered in Ghent. She translates between these languages, in any combination:"
+      "role": "Sworn translator, Ghent",
+      "combinations": "Any combination of",
+      "registerLink": "Check the official register",
+      "photoAlt": "Elouise Verheyen, sworn translator"
     },
     "documents": {
       "title": "Documents we translate",
@@ -206,8 +206,7 @@
       "title": "What makes it a sworn translation",
       "fidelity": "Full fidelity: nothing is added, left out or corrected. Stamps, seals, signatures and QR codes are described in brackets where they appear.",
       "certification": "Every page carries \"Voor eensluidende vertaling\". The last page has the certification clause, signature and VTI number.",
-      "delivery": "Delivered as a PDF with a qualified electronic signature, plus a hand-signed copy.",
-      "legalization": "Legalization through FPS Foreign Affairs (eLegalization) is available if the receiving authority asks for it."
+      "delivery": "Delivered as a PDF with a qualified electronic signature, plus a hand-signed copy if necessary."
     },
     "steps": {
       "title": "How it works",
@@ -215,7 +214,7 @@
       "step2": "Receive a quote within two business days.",
       "step3": "Pay a 50% deposit.",
       "step4": "The translation is prepared and certified.",
-      "step5": "Receive the signed PDF and pay the balance. Legalization is optional."
+      "step5": "Receive the signed PDF and pay the balance."
     },
     "pricing": {
       "title": "Pricing",
@@ -234,7 +233,7 @@
       },
       "acceptance": {
         "q": "Will the authority accept the translation?",
-        "a": "Translations by a sworn translator registered in Belgium are accepted by Belgian authorities. Some ask for legalization as well. Check with the receiving office, or ask us."
+        "a": "Belgian authorities accept translations by a sworn translator registered in Belgium. Authorities in other countries set their own rules, so check with the receiving office before you order."
       },
       "belgianDutch": {
         "q": "Is the Dutch suitable for Belgian authorities?",
@@ -242,7 +241,7 @@
       },
       "apostille": {
         "q": "Do I also need an apostille or legalization of the original document?",
-        "a": "That depends on the country that issued it and on the authority receiving it. It is separate from the translation. We can tell you what usually applies."
+        "a": "Most official documents already carry an apostille or legalization from the country that issued them. If yours doesn't and the receiving authority needs one, you arrange it in that country before ordering the translation. We don't handle this step."
       },
       "payment": {
         "q": "How do I pay?",

@@ -38,7 +38,7 @@ const SERVICE_OPTIONS = [
   'Family reunification',
   'Integration support',
   'Asylum support',
-  'Document legalisation',
+  'Sworn translations',
   'Work permits',
   'Student visas',
   'Appeals',

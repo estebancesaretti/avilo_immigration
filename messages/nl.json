@@ -36,6 +36,11 @@
     "card3": {
       "title": "Integratie en Vestiging",
       "description": "Taalondersteuning en inburgeringscursussen om u te helpen een stabiel leven op te bouwen."
+    },
+    "card5": {
+      "title": "Beëdigde vertalingen",
+      "description": "Beëdigde vertalingen van akten van de burgerlijke stand, vonnissen en notariële akten, in het Nederlands, Frans, Engels en Spaans.",
+      "link": "Bekijk beëdigde vertalingen"
     }
   },
   "whereWeOperate": {
@@ -94,8 +99,8 @@
   },
   "swornTranslations": {
     "meta": {
-      "title": "Beëdigde vertalingen in België | Avilo",
-      "description": "Beëdigde vertalingen van akten van de burgerlijke stand, vonnissen en notariële akten voor Belgische overheden, door een beëdigd vertaler die in België geregistreerd is."
+      "title": "Beëdigde vertalingen | Avilo",
+      "description": "Beëdigde vertalingen van akten van de burgerlijke stand, vonnissen en notariële akten tussen het Nederlands, Frans, Engels en Spaans, door een beëdigd vertaler die in België geregistreerd is."
     },
     "languages": {
       "en": "Engels",
@@ -104,18 +109,17 @@
       "fr": "Frans"
     },
     "hero": {
-      "title": "Beëdigde vertalingen voor Belgische overheden",
-      "sub": "Akten van de burgerlijke stand, vonnissen en notariële akten, vertaald door een beëdigd vertaler die in België geregistreerd is.",
+      "title": "Beëdigde vertalingen van officiële documenten",
+      "sub": "Akten van de burgerlijke stand, vonnissen en notariële akten, beëdigd en klaar om in te dienen.",
       "ctaQuote": "Offerte aanvragen",
       "ctaPricing": "Bekijk de prijzen",
-      "animationDescription": "Beëdigde vertalingen tussen het Nederlands, Frans, Engels en Spaans"
+      "facts": "Vanaf € 90 · 2 à 3 werkdagen · Ondertekende pdf"
     },
     "translator": {
-      "title": "Uw vertaler",
-      "registerLink": "Controleer haar inschrijving in het officiële register",
-      "photoAlt": "Elouise Verheyen, beëdigd vertaler",
-      "role": "Beëdigd vertaler · {vti}",
-      "body": "Elouise Verheyen is beëdigd vertaler, geregistreerd in Gent. Ze vertaalt tussen deze talen, in elke combinatie:"
+      "role": "Beëdigd vertaler, Gent",
+      "combinations": "Elke combinatie van",
+      "registerLink": "Bekijk het officiële register",
+      "photoAlt": "Elouise Verheyen, beëdigd vertaler"
     },
     "documents": {
       "title": "Documenten die we vertalen",
@@ -148,8 +152,7 @@
       "title": "Wat maakt een vertaling beëdigd",
       "fidelity": "Volledige getrouwheid: er wordt niets toegevoegd, weggelaten of verbeterd. Stempels, zegels, handtekeningen en QR-codes worden tussen haakjes beschreven waar ze voorkomen.",
       "certification": "Elke pagina draagt de vermelding \"Voor eensluidende vertaling\". De laatste pagina bevat de certificeringsformule, de handtekening en het VTI-nummer.",
-      "delivery": "Geleverd als pdf met een gekwalificeerde elektronische handtekening, plus een exemplaar met handgeschreven handtekening.",
-      "legalization": "Legalisatie via de FOD Buitenlandse Zaken (eLegalisatie) is mogelijk als de ontvangende instantie daarom vraagt."
+      "delivery": "Geleverd als pdf met een gekwalificeerde elektronische handtekening, plus een exemplaar met handgeschreven handtekening indien nodig."
     },
     "steps": {
       "title": "Zo werkt het",
@@ -157,7 +160,7 @@
       "step2": "Ontvang binnen twee werkdagen een offerte.",
       "step3": "Betaal een voorschot van 50%.",
       "step4": "De vertaling wordt opgemaakt en beëdigd.",
-      "step5": "Ontvang de ondertekende pdf en betaal het saldo. Legalisatie is optioneel."
+      "step5": "Ontvang de ondertekende pdf en betaal het saldo."
     },
     "pricing": {
       "title": "Prijzen",
@@ -176,7 +179,7 @@
       },
       "acceptance": {
         "q": "Aanvaardt de instantie de vertaling?",
-        "a": "Vertalingen van een beëdigd vertaler die in België geregistreerd is, worden door Belgische overheden aanvaard. Sommige vragen daarnaast een legalisatie. Vraag het na bij de ontvangende dienst, of vraag het ons."
+        "a": "Belgische overheden aanvaarden vertalingen van een beëdigd vertaler die in België geregistreerd is. Instanties in andere landen hanteren hun eigen regels, dus vraag het na bij de ontvangende dienst voordat u bestelt."
       },
       "belgianDutch": {
         "q": "Is het Nederlands geschikt voor Belgische overheden?",
@@ -184,7 +187,7 @@
       },
       "apostille": {
         "q": "Heb ik ook een apostille of legalisatie van het originele document nodig?",
-        "a": "Dat hangt af van het land dat het document heeft uitgereikt en van de instantie die het ontvangt. Dat staat los van de vertaling. We kunnen u zeggen wat meestal van toepassing is."
+        "a": "De meeste officiële documenten hebben al een apostille of legalisatie van het land dat ze heeft uitgereikt. Heeft uw document er geen en vraagt de ontvangende instantie erom, dan regelt u dat in dat land voordat u de vertaling bestelt. Die stap regelen wij niet."
       },
       "payment": {
         "q": "Hoe betaal ik?",

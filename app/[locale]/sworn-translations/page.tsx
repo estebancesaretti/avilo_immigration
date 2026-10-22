@@ -8,8 +8,7 @@ import Footer from '@/components/Footer'
 import Container from '@/components/Container'
 import Accordion from '@/components/Accordion'
 import QuoteForm from '@/components/sworn-translations/QuoteForm'
-import TranslationAnimation from '@/components/TranslationAnimation'
-import { ArrowRight, BadgeCheck, Clock, ExternalLink, Gavel, Landmark, ScrollText, ShieldCheck, Stamp } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, BadgeCheck, Clock, Gavel, Landmark, ScrollText, ShieldCheck, Stamp } from 'lucide-react'
 import { LANGUAGES, REGISTER_URL, VTI_NUMBER } from '@/lib/sworn-translations'
 
 type Props = {
@@ -24,7 +23,7 @@ const DOCUMENT_GROUPS = [
   { key: 'police', icon: ShieldCheck },
 ] as const
 
-const SWORN_POINTS = ['fidelity', 'certification', 'delivery', 'legalization'] as const
+const SWORN_POINTS = ['fidelity', 'certification', 'delivery'] as const
 const STEPS = ['step1', 'step2', 'step3', 'step4', 'step5'] as const
 const FAQ = ['original', 'acceptance', 'belgianDutch', 'apostille', 'payment', 'privacy', 'otherLanguages'] as const
 
@@ -34,6 +33,15 @@ const h2Style: React.CSSProperties = {
   fontWeight: 700,
   color: 'var(--color-ink)',
   margin: '0 0 2.5rem',
+}
+
+// Small muted lines in the translator card
+const cardMetaStyle: React.CSSProperties = {
+  fontFamily: 'var(--font-body)',
+  fontSize: '12px',
+  lineHeight: 1.5,
+  color: 'var(--color-muted)',
+  margin: 0,
 }
 
 const bodyStyle: React.CSSProperties = {
@@ -80,7 +88,7 @@ export default async function SwornTranslationsPage({ params }: Props) {
         {/* ── Hero ── */}
         <section style={{ backgroundColor: 'var(--color-bg)', padding: '4.5rem 0' }}>
           {/* Text left, document animation right; animation below the text on mobile */}
-          <Container className="flex flex-col md:grid md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] md:items-center gap-10">
+          <Container className="flex flex-col md:grid md:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] md:items-center gap-10 md:gap-12">
             <div style={{ maxWidth: '760px', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <h1 style={{
                 fontFamily: 'var(--font-heading)',
@@ -125,62 +133,82 @@ export default async function SwornTranslationsPage({ params }: Props) {
                   {t('hero.ctaPricing')}
                 </a>
               </div>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '13px', color: 'var(--color-muted)', margin: '-0.5rem 0 0' }}>
+                {t('hero.facts')}
+              </p>
             </div>
-            <TranslationAnimation />
-          </Container>
-        </section>
 
-        {/* ── Your translator ── */}
-        <section style={{ backgroundColor: 'var(--color-white)', padding: '5rem 0' }}>
-          <Container className="grid md:grid-cols-[minmax(0,320px)_1fr] gap-10 md:gap-16 items-center">
-            <figure style={{ margin: 0 }}>
-              <div style={{ position: 'relative', aspectRatio: '4/5', borderRadius: 'var(--radius-card)', overflow: 'hidden', maxWidth: '320px' }}>
-                <Image src="/images/elouise.jpg" alt={t('translator.photoAlt')} fill loading="eager" sizes="(min-width: 768px) 320px, 90vw" style={{ objectFit: 'cover' }} />
+            {/* Translator card */}
+            <div
+              className="md:justify-self-start"
+              style={{
+                width: '100%',
+                maxWidth: '440px',
+                backgroundColor: 'var(--color-white)',
+                border: '1px solid var(--color-border)',
+                borderRadius: 'var(--radius-card)',
+                padding: '24px',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '1.125rem',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                <Image
+                  src="/images/elouise.jpg"
+                  alt={t('translator.photoAlt')}
+                  width={72}
+                  height={72}
+                  loading="eager"
+                  style={{ width: '72px', height: '72px', borderRadius: '8px', objectFit: 'cover', objectPosition: 'center 25%', flexShrink: 0 }}
+                />
+                <div>
+                  <p style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '1.0625rem', color: 'var(--color-ink)', margin: '0 0 0.125rem' }}>
+                    Elouise Verheyen
+                  </p>
+                  <p style={{ ...cardMetaStyle }}>{t('translator.role')}</p>
+                  <p style={{ ...cardMetaStyle }}>{VTI_NUMBER}</p>
+                </div>
               </div>
-              <figcaption style={{ marginTop: '1rem' }}>
-                <span style={{ display: 'block', fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '1.0625rem', color: 'var(--color-ink)' }}>
-                  Elouise Verheyen
-                </span>
-                <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: 'var(--color-muted)' }}>
-                  {t('translator.role', { vti: VTI_NUMBER })}
-                </span>
-              </figcaption>
-            </figure>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', maxWidth: '640px' }}>
-              <h2 style={{ ...h2Style, margin: 0 }}>{t('translator.title')}</h2>
-              <p style={bodyStyle}>{t('translator.body')}</p>
-              <ul style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', listStyle: 'none', padding: 0, margin: 0 }}>
-                {LANGUAGES.map((code) => (
-                  <li key={code} style={{
-                    border: '1px solid var(--color-primary)',
-                    borderRadius: 'var(--radius-badge)',
-                    color: 'var(--color-primary)',
-                    fontFamily: 'var(--font-body)',
-                    fontSize: '13px',
-                    fontWeight: 600,
-                    lineHeight: 1,
-                    padding: '0.4375rem 0.875rem',
-                  }}>
-                    {t(`languages.${code}`)}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href={REGISTER_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-ink"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem', fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '0.9375rem', textDecoration: 'underline', width: 'fit-content' }}
-              >
-                {t('translator.registerLink')}
-                <ExternalLink size={15} aria-hidden="true" />
-              </a>
+
+              <div>
+                <p style={{ ...cardMetaStyle, marginBottom: '0.5rem' }}>{t('translator.combinations')}</p>
+                <ul style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', listStyle: 'none', padding: 0, margin: 0 }}>
+                  {LANGUAGES.map((code) => (
+                    <li key={code} style={{
+                      border: '1px solid var(--color-primary)',
+                      borderRadius: 'var(--radius-badge)',
+                      color: 'var(--color-primary)',
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '12px',
+                      fontWeight: 600,
+                      lineHeight: 1,
+                      padding: '0.375rem 0.75rem',
+                    }}>
+                      {t(`languages.${code}`)}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div style={{ borderTop: '1px solid var(--color-border)', paddingTop: '0.875rem' }}>
+                <a
+                  href={REGISTER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-ink"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: '0.25rem', fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none' }}
+                >
+                  {t('translator.registerLink')}
+                  <ArrowUpRight size={15} aria-hidden="true" />
+                </a>
+              </div>
             </div>
           </Container>
         </section>
 
         {/* ── Documents we translate ── */}
-        <section style={{ backgroundColor: 'var(--color-bg)', padding: '5rem 0' }}>
+        <section style={{ backgroundColor: 'var(--color-white)', padding: '5rem 0' }}>
           <Container>
             <h2 style={h2Style}>{t('documents.title')}</h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
@@ -210,10 +238,10 @@ export default async function SwornTranslationsPage({ params }: Props) {
         </section>
 
         {/* ── What makes it a sworn translation ── */}
-        <section style={{ backgroundColor: 'var(--color-white)', padding: '5rem 0' }}>
+        <section style={{ backgroundColor: 'var(--color-bg)', padding: '5rem 0' }}>
           <Container>
             <h2 style={h2Style}>{t('sworn.title')}</h2>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-5" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-5" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               {SWORN_POINTS.map((key) => (
                 <li key={key} style={{
                   display: 'flex', gap: '0.875rem', alignItems: 'flex-start',
@@ -231,7 +259,7 @@ export default async function SwornTranslationsPage({ params }: Props) {
         </section>
 
         {/* ── How it works ── */}
-        <section style={{ backgroundColor: 'var(--color-bg)', padding: '5rem 0' }}>
+        <section style={{ backgroundColor: 'var(--color-white)', padding: '5rem 0' }}>
           <Container>
             <h2 style={h2Style}>{t('steps.title')}</h2>
             <ol className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-5" style={{ listStyle: 'none', padding: 0, margin: 0 }}>

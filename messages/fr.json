@@ -36,6 +36,11 @@
     "card3": {
       "title": "Intégration et Installation",
       "description": "Soutien linguistique et cours d'intégration civique pour vous aider à construire une vie stable."
+    },
+    "card5": {
+      "title": "Traductions jurées",
+      "description": "Traductions certifiées d'actes d'état civil, de jugements et d'actes notariés, en néerlandais, français, anglais et espagnol.",
+      "link": "Voir les traductions jurées"
     }
   },
   "whereWeOperate": {
@@ -94,8 +99,8 @@
   },
   "swornTranslations": {
     "meta": {
-      "title": "Traductions jurées en Belgique | Avilo",
-      "description": "Traductions jurées d'actes d'état civil, de jugements et d'actes notariés pour les autorités belges, par une traductrice jurée inscrite en Belgique."
+      "title": "Traductions jurées | Avilo",
+      "description": "Traductions jurées d'actes d'état civil, de jugements et d'actes notariés entre le néerlandais, le français, l'anglais et l'espagnol, par une traductrice jurée inscrite en Belgique."
     },
     "languages": {
       "en": "Anglais",
@@ -104,18 +109,17 @@
       "fr": "Français"
     },
     "hero": {
-      "title": "Traductions jurées pour les autorités belges",
-      "sub": "Actes d'état civil, jugements et actes notariés, traduits par une traductrice jurée inscrite en Belgique.",
+      "title": "Traductions jurées de documents officiels",
+      "sub": "Actes d'état civil, jugements et actes notariés, certifiés et prêts à être déposés.",
       "ctaQuote": "Demander un devis",
       "ctaPricing": "Voir les tarifs",
-      "animationDescription": "Traductions jurées entre le néerlandais, le français, l'anglais et l'espagnol"
+      "facts": "À partir de 90 € · 2 à 3 jours ouvrables · PDF signé"
     },
     "translator": {
-      "title": "Votre traductrice",
-      "registerLink": "Vérifier son inscription dans le registre officiel",
-      "photoAlt": "Elouise Verheyen, traductrice jurée",
-      "role": "Traductrice jurée · {vti}",
-      "body": "Elouise Verheyen est traductrice jurée, inscrite à Gand. Elle traduit entre ces langues, dans toutes les combinaisons :"
+      "role": "Traductrice jurée, Gand",
+      "combinations": "Toutes les combinaisons entre",
+      "registerLink": "Consulter le registre officiel",
+      "photoAlt": "Elouise Verheyen, traductrice jurée"
     },
     "documents": {
       "title": "Documents que nous traduisons",
@@ -148,8 +152,7 @@
       "title": "Ce qui fait une traduction jurée",
       "fidelity": "Fidélité totale : rien n'est ajouté, omis ni corrigé. Les cachets, sceaux, signatures et codes QR sont décrits entre crochets là où ils apparaissent.",
       "certification": "Chaque page porte la mention « Voor eensluidende vertaling ». La dernière page comporte la formule de certification, la signature et le numéro VTI.",
-      "delivery": "Livrée en PDF avec une signature électronique qualifiée, ainsi qu'un exemplaire signé à la main.",
-      "legalization": "La légalisation par le SPF Affaires étrangères (eLegalization) est possible si l'autorité destinataire la demande."
+      "delivery": "Livrée en PDF avec une signature électronique qualifiée, ainsi qu'un exemplaire signé à la main si nécessaire."
     },
     "steps": {
       "title": "Comment ça marche",
@@ -157,7 +160,7 @@
       "step2": "Recevez un devis dans les deux jours ouvrables.",
       "step3": "Payez un acompte de 50 %.",
       "step4": "La traduction est réalisée et certifiée.",
-      "step5": "Recevez le PDF signé et payez le solde. La légalisation est facultative."
+      "step5": "Recevez le PDF signé et payez le solde."
     },
     "pricing": {
       "title": "Tarifs",
@@ -176,7 +179,7 @@
       },
       "acceptance": {
         "q": "L'autorité acceptera-t-elle la traduction ?",
-        "a": "Les traductions réalisées par un traducteur juré inscrit en Belgique sont acceptées par les autorités belges. Certaines demandent aussi une légalisation. Renseignez-vous auprès du service destinataire, ou posez-nous la question."
+        "a": "Les autorités belges acceptent les traductions d'un traducteur juré inscrit en Belgique. Dans d'autres pays, chaque autorité fixe ses propres règles : renseignez-vous auprès du service destinataire avant de commander."
       },
       "belgianDutch": {
         "q": "Le néerlandais convient-il aux autorités belges ?",
@@ -184,7 +187,7 @@
       },
       "apostille": {
         "q": "Ai-je aussi besoin d'une apostille ou d'une légalisation du document original ?",
-        "a": "Cela dépend du pays qui l'a délivré et de l'autorité qui le reçoit. C'est distinct de la traduction. Nous pouvons vous dire ce qui s'applique habituellement."
+        "a": "La plupart des documents officiels portent déjà une apostille ou une légalisation du pays qui les a délivrés. Si ce n'est pas le cas du vôtre et que l'autorité destinataire l'exige, vous devez l'obtenir dans ce pays avant de commander la traduction. Nous ne prenons pas en charge cette démarche."
       },
       "payment": {
         "q": "Comment payer ?",
